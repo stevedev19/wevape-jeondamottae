@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>위베이프 영등포점 · 영등포전자담배 · 전국 무료배송</title>
+  <meta name="description" content="위베이프 영등포점 - 전자담배 기기, 액상, 코일, 액세서리. 전국 무료배송, 당일발송, 퀵서비스." />
+
+  <!-- Google Font: Noto Sans KR (only external dependency) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============================================================= -->
+  <!-- AGE VERIFICATION MODAL (shown on first load per session)      -->
+  <!-- ============================================================= -->
+  <div id="age-gate" class="age-gate" aria-hidden="true">
+    <div class="age-gate__box" role="dialog" aria-modal="true" aria-labelledby="age-gate-title">
+      <div class="age-gate__logo">WeVape</div>
+      <h2 id="age-gate-title" class="age-gate__title">만 19세 이상이십니까?</h2>
+      <p class="age-gate__desc">
+        본 사이트는 전자담배 관련 상품을 다루는 성인 전용 페이지입니다.<br />
+        미성년자는 이용하실 수 없습니다.
+      </p>
+      <div class="age-gate__buttons">
+        <button id="age-yes" class="btn btn--green">예 (만 19세 이상)</button>
+        <button id="age-no" class="btn btn--ghost">아니오</button>
+      </div>
+      <p class="age-gate__legal">청소년보호법에 따라 만 19세 미만 청소년에게 판매하지 않습니다.</p>
+    </div>
+  </div>
+
+  <!-- ============================================================= -->
+  <!-- HEADER (sticky)                                               -->
+  <!-- ============================================================= -->
+  <header id="site-header" class="header">
+    <div class="header__inner container">
+      <!-- LOGO PLACEHOLDER: swap this text for an <img> logo later -->
+      <a href="#top" class="logo">
+        <span class="logo__mark">위베이프</span>
+        <span class="logo__sub">영등포점</span>
+      </a>
+      <nav class="header__nav">
+        <a href="#categories">카테고리</a>
+        <a href="#about">소개</a>
+        <a href="#blog">공지</a>
+        <a href="#location">오시는길</a>
+      </nav>
+      <!-- HEADER CTA: replace href with real KakaoTalk channel link -->
+      <a href="#" class="btn btn--green btn--sm header__cta">카톡상담</a>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ============================================================= -->
+    <!-- HERO                                                          -->
+    <!-- ============================================================= -->
+    <section class="hero">
+      <!-- Animated CSS smoke/vapor blobs (no images) -->
+      <div class="hero__smoke">
+        <span class="smoke smoke--1"></span>
+        <span class="smoke smoke--2"></span>
+        <span class="smoke smoke--3"></span>
+      </div>
+
+      <div class="hero__content container">
+        <p class="hero__eyebrow">WeVape · 영등포점</p>
+        <h1 class="hero__title">영등포전자담배<br /><span class="grad-text">전국 무료배송</span></h1>
+        <p class="hero__subtitle">
+          기기부터 액상, 코일, 액세서리까지.<br />
+          믿을 수 있는 정품만, 당일발송으로 빠르게 받아보세요.
+        </p>
+        <!-- HERO CTA: replace href with real KakaoTalk channel link -->
+        <a href="#" class="btn btn--green btn--lg">카카오톡 상담하기</a>
+      </div>
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- NOTICE TICKER (marquee) — text edited in script.js            -->
+    <!-- ============================================================= -->
+    <div class="ticker" aria-label="공지사항">
+      <div class="ticker__label">NOTICE</div>
+      <div class="ticker__viewport">
+        <div id="ticker-track" class="ticker__track"><!-- injected by JS --></div>
+      </div>
+    </div>
+
+    <!-- ============================================================= -->
+    <!-- PERKS ROW                                                     -->
+    <!-- ============================================================= -->
+    <section class="perks container">
+      <div class="perk">
+        <div class="perk__icon">🚚</div>
+        <h3 class="perk__title">무료배송</h3>
+        <p class="perk__desc">전국 어디든 무료로</p>
+      </div>
+      <div class="perk">
+        <div class="perk__icon">⚡</div>
+        <h3 class="perk__title">퀵서비스</h3>
+        <p class="perk__desc">급할 땐 퀵으로</p>
+      </div>
+      <div class="perk">
+        <div class="perk__icon">🅿️</div>
+        <h3 class="perk__title">주차가능</h3>
+        <p class="perk__desc">매장 방문 주차 OK</p>
+      </div>
+      <div class="perk">
+        <div class="perk__icon">📦</div>
+        <h3 class="perk__title">당일발송</h3>
+        <p class="perk__desc">오후 주문도 당일에</p>
+      </div>
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- ABOUT                                                         -->
+    <!-- ============================================================= -->
+    <section id="about" class="about container reveal">
+      <div class="about__text">
+        <p class="section-eyebrow">ABOUT</p>
+        <h2 class="section-title">영등포 전자담배 전문 매장</h2>
+        <!-- ABOUT COPY: replace with your real store description -->
+        <p>
+          위베이프 영등포점은 정품 전자담배 기기와 액상, 코일, 액세서리를
+          합리적인 가격에 제공하는 전문 매장입니다. 초보자부터 마니아까지,
+          매장 전문 상담을 통해 나에게 맞는 제품을 찾아드립니다.
+        </p>
+        <p>
+          온라인 주문 시 전국 무료배송과 당일발송을 지원하며,
+          영등포 인근은 퀵서비스로 더욱 빠르게 받아보실 수 있습니다.
+        </p>
+        <a href="#location" class="btn btn--ghost btn--sm">매장 위치 보기</a>
+      </div>
+      <!-- ABOUT IMAGE: replace this gray box with a real store photo -->
+      <div class="about__media" aria-hidden="true">
+        <span>매장 사진 자리</span>
+      </div>
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- CATEGORY GRID                                                 -->
+    <!-- ============================================================= -->
+    <section id="categories" class="categories container">
+      <p class="section-eyebrow center">CATEGORY</p>
+      <h2 class="section-title center">카테고리</h2>
+      <div class="cat-grid">
+        <a href="#" class="cat-card reveal">
+          <div class="cat-card__icon">🔋</div>
+          <h3 class="cat-card__label">기기</h3>
+        </a>
+        <a href="#" class="cat-card reveal">
+          <div class="cat-card__icon">💧</div>
+          <h3 class="cat-card__label">액상</h3>
+        </a>
+        <a href="#" class="cat-card reveal">
+          <div class="cat-card__icon">🧵</div>
+          <h3 class="cat-card__label">코일</h3>
+        </a>
+        <a href="#" class="cat-card reveal">
+          <div class="cat-card__icon">🎒</div>
+          <h3 class="cat-card__label">액세서리</h3>
+        </a>
+      </div>
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- BRAND STRIP                                                   -->
+    <!-- ============================================================= -->
+    <section class="brands">
+      <div class="brands__inner container">
+        <!-- BRAND PLACEHOLDERS: swap for real brand logos later -->
+        <span class="brand">RELX</span>
+        <span class="brand">WAKO</span>
+        <span class="brand">ACE</span>
+      </div>
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- BLOG / NOTICE — cards edited in script.js                     -->
+    <!-- ============================================================= -->
+    <section id="blog" class="blog container">
+      <p class="section-eyebrow center">BLOG</p>
+      <h2 class="section-title center">공지 &amp; 소식</h2>
+      <div id="blog-grid" class="blog-grid"><!-- injected by JS --></div>
+      <div class="blog__more">
+        <!-- MORE BUTTON: replace href with your blog/notice list page -->
+        <a href="#" class="btn btn--ghost">더보기</a>
+      </div>
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- LOCATION & CONTACT                                            -->
+    <!-- ============================================================= -->
+    <section id="location" class="location container reveal">
+      <div class="location__info">
+        <p class="section-eyebrow">LOCATION</p>
+        <h2 class="section-title">오시는 길 &amp; 문의</h2>
+
+        <!-- STORE ADDRESS: replace with real address -->
+        <p class="location__addr">서울특별시 영등포구 ○○로 00, 1층 (매장 주소 자리)</p>
+
+        <ul class="location__hours">
+          <li><span>영업시간</span> 매일 11:00 – 22:00</li>
+          <li><span>연중무휴</span> 명절 당일 휴무</li>
+        </ul>
+
+        <div class="location__actions">
+          <!-- PHONE: tap-to-call. Number is set in script.js (STORE_PHONE) -->
+          <a id="call-link" href="#" class="btn btn--green">📞 전화하기</a>
+          <!-- KAKAO: replace href with real KakaoTalk channel link -->
+          <a href="#" class="btn btn--ghost">💬 카카오톡 상담</a>
+        </div>
+      </div>
+
+      <!-- MAP: replace this gray box with an embedded map (Kakao/Naver) -->
+      <div class="location__map" aria-hidden="true">
+        <span>지도 자리 (카카오/네이버 지도 삽입)</span>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================= -->
+  <!-- FOOTER                                                         -->
+  <!-- ============================================================= -->
+  <footer class="footer">
+    <div class="footer__inner container">
+      <div class="footer__brand">위베이프 영등포점</div>
+      <!-- FOOTER LEGAL: replace all placeholder numbers with real ones -->
+      <ul class="footer__meta">
+        <li>상호: 위베이프 영등포점</li>
+        <li>대표: 홍길동</li>
+        <li>사업자등록번호: 000-00-00000</li>
+        <li>통신판매업신고번호: 2026-서울영등포-0000</li>
+        <li>영업시간: 매일 11:00 – 22:00</li>
+        <li>주소: 서울특별시 영등포구 ○○로 00, 1층</li>
+      </ul>
+      <p class="footer__notice">
+        본 사이트는 만 19세 이상 성인만 이용 가능하며, 청소년보호법에 따라
+        미성년자에게 판매하지 않습니다.
+      </p>
+      <p class="footer__copy">© 2026 WeVape 영등포점. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ============================================================= -->
+  <!-- FLOATING KAKAO BUTTON                                          -->
+  <!-- ============================================================= -->
+  <!-- FLOATING KAKAO: replace href with real KakaoTalk channel link -->
+  <a href="#" class="float-kakao" aria-label="카카오톡 상담하기">
+    <span class="float-kakao__icon">💬</span>
+    <span class="float-kakao__text">카톡상담</span>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
