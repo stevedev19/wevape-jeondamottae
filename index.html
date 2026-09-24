@@ -25,8 +25,8 @@
     <div class="age-gate__box" role="dialog" aria-modal="true" aria-labelledby="age-gate-title">
       <!-- LANGUAGE SWITCH (synced with the header one) -->
       <div class="lang-switch age-gate__lang" role="group" aria-label="Language">
-        <button type="button" data-lang="ko">KO</button>
-        <button type="button" data-lang="en">EN</button>
+        <button type="button" data-lang="en">ENG</button>
+        <button type="button" data-lang="ko">KOR</button>
         <button type="button" data-lang="zh">中文</button>
       </div>
       <div class="age-gate__logo">WeVape</div>
@@ -62,14 +62,42 @@
       <div class="header__right">
         <!-- LANGUAGE SWITCH -->
         <div class="lang-switch" role="group" aria-label="Language">
-          <button type="button" data-lang="ko">KO</button>
-          <button type="button" data-lang="en">EN</button>
+          <button type="button" data-lang="en">ENG</button>
+          <button type="button" data-lang="ko">KOR</button>
           <button type="button" data-lang="zh">中文</button>
         </div>
         <!-- HEADER CTA: replace href with real KakaoTalk channel link -->
         <a href="https://talk.naver.com/ct/w5t1uu?frm=mnmb&frm=nmb_detail#nafullscreen" class="btn btn--green btn--sm header__cta" data-i18n="header.cta">네이버 상담</a>
         <!-- INSTAGRAM: replace YOUR_HANDLE with the real Instagram handle (also in the footer) -->
         <a href="https://www.instagram.com/jeondam_ottae/" class="ig-link ig-link--sm" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="2" y="2" width="20" height="20" rx="5.5"/>
+            <circle cx="12" cy="12" r="4.5"/>
+            <circle cx="17.5" cy="6.5" r="0.6" fill="currentColor"/>
+          </svg>
+        </a>
+        <!-- HAMBURGER (mobile only, < 768px) -->
+        <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- MOBILE MENU (dropdown under the header, < 768px) -->
+    <div class="mobile-menu" id="mobile-menu" hidden>
+      <nav class="mobile-menu__nav container">
+        <a href="#categories" data-i18n="nav.categories">카테고리</a>
+        <a href="#about" data-i18n="nav.about">소개</a>
+        <a href="#blog" data-i18n="nav.blog">공지</a>
+        <a href="#location" data-i18n="nav.location">오시는길</a>
+      </nav>
+      <div class="mobile-menu__bottom container">
+        <div class="lang-switch lang-switch--lg" role="group" aria-label="Language">
+          <button type="button" data-lang="en">ENG</button>
+          <button type="button" data-lang="ko">KOR</button>
+          <button type="button" data-lang="zh">中文</button>
+        </div>
+        <a href="https://www.instagram.com/jeondam_ottae/" class="ig-link" target="_blank" rel="noopener" aria-label="Instagram">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <rect x="2" y="2" width="20" height="20" rx="5.5"/>
             <circle cx="12" cy="12" r="4.5"/>
