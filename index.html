@@ -6,10 +6,13 @@
   <title data-i18n="meta.title">위베이프 x 전담어때 영등포점 · 영등포전자담배 · 전국 무료배송</title>
   <meta name="description" data-i18n-attr="content:meta.desc" content="위베이프 x 전담어때 영등포점 - 전자담배 기기, 액상, 코일, 액세서리. 전국 무료배송, 당일발송, 퀵서비스." />
 
-  <!-- Google Fonts: Noto Sans KR + Noto Sans SC for Chinese (only external dependency) -->
+  <!-- Google Fonts: Noto Sans KR + Noto Sans SC for Chinese -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet" />
+
+  <!-- Tabler Icons webfont (outline icon set used for perks + categories) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.48.0/dist/tabler-icons.min.css" />
 
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -64,7 +67,15 @@
           <button type="button" data-lang="zh">中文</button>
         </div>
         <!-- HEADER CTA: replace href with real KakaoTalk channel link -->
-        <a href="#" class="btn btn--green btn--sm header__cta" data-i18n="header.cta">네이버 상담</a>
+        <a href="https://talk.naver.com/ct/w5t1uu?frm=mnmb&frm=nmb_detail#nafullscreen" class="btn btn--green btn--sm header__cta" data-i18n="header.cta">네이버 상담</a>
+        <!-- INSTAGRAM: replace YOUR_HANDLE with the real Instagram handle (also in the footer) -->
+        <a href="https://www.instagram.com/jeondam_ottae/" class="ig-link ig-link--sm" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="2" y="2" width="20" height="20" rx="5.5"/>
+            <circle cx="12" cy="12" r="4.5"/>
+            <circle cx="17.5" cy="6.5" r="0.6" fill="currentColor"/>
+          </svg>
+        </a>
       </div>
     </div>
   </header>
@@ -75,11 +86,12 @@
     <!-- HERO                                                          -->
     <!-- ============================================================= -->
     <section class="hero">
-      <!-- Animated CSS smoke/vapor blobs (no images) -->
+      <!-- Decorative vapor atmosphere: 4 blurred, slowly drifting shapes (no images) -->
       <div class="hero__smoke">
         <span class="smoke smoke--1"></span>
         <span class="smoke smoke--2"></span>
         <span class="smoke smoke--3"></span>
+        <span class="smoke smoke--4"></span>
       </div>
 
       <div class="hero__content container">
@@ -90,7 +102,7 @@
           믿을 수 있는 정품만, 당일발송으로 빠르게 받아보세요.
         </p>
         <!-- HERO CTA: replace href with real KakaoTalk channel link -->
-        <a href="#" class="btn btn--green btn--lg" data-i18n="cta.kakao">네이버 상담하기</a>
+        <a href="https://talk.naver.com/ct/w5t1uu?frm=mnmb&frm=nmb_detail#nafullscreen" class="btn btn--green btn--lg" data-i18n="cta.kakao">네이버 상담하기</a>
       </div>
     </section>
 
@@ -109,22 +121,22 @@
     <!-- ============================================================= -->
     <section class="perks container">
       <div class="perk">
-        <div class="perk__icon">🚚</div>
+        <div class="perk__icon"><i class="ti ti-truck" aria-hidden="true"></i></div>
         <h3 class="perk__title" data-i18n="perk.ship.title">무료배송</h3>
         <p class="perk__desc" data-i18n="perk.ship.desc">전국 어디든 무료로</p>
       </div>
       <div class="perk">
-        <div class="perk__icon">⚡</div>
+        <div class="perk__icon"><i class="ti ti-bolt" aria-hidden="true"></i></div>
         <h3 class="perk__title" data-i18n="perk.quick.title">퀵서비스</h3>
         <p class="perk__desc" data-i18n="perk.quick.desc">급할 땐 퀵으로</p>
       </div>
       <div class="perk">
-        <div class="perk__icon">🅿️</div>
+        <div class="perk__icon"><i class="ti ti-parking" aria-hidden="true"></i></div>
         <h3 class="perk__title" data-i18n="perk.parking.title">주차가능</h3>
         <p class="perk__desc" data-i18n="perk.parking.desc">매장 방문 주차 OK</p>
       </div>
       <div class="perk">
-        <div class="perk__icon">📦</div>
+        <div class="perk__icon"><i class="ti ti-package" aria-hidden="true"></i></div>
         <h3 class="perk__title" data-i18n="perk.sameday.title">당일발송</h3>
         <p class="perk__desc" data-i18n="perk.sameday.desc">오후 주문도 당일에</p>
       </div>
@@ -167,19 +179,19 @@
       <h2 class="section-title center" data-i18n="cat.title">카테고리</h2>
       <div class="cat-grid">
         <a href="#" class="cat-card reveal">
-          <div class="cat-card__icon">🔋</div>
+          <div class="cat-card__icon"><i class="ti ti-device-mobile" aria-hidden="true"></i></div>
           <h3 class="cat-card__label" data-i18n="cat.devices">기기</h3>
         </a>
         <a href="#" class="cat-card reveal">
-          <div class="cat-card__icon">💧</div>
+          <div class="cat-card__icon"><i class="ti ti-droplet" aria-hidden="true"></i></div>
           <h3 class="cat-card__label" data-i18n="cat.liquids">액상</h3>
         </a>
         <a href="#" class="cat-card reveal">
-          <div class="cat-card__icon">🧵</div>
+          <div class="cat-card__icon"><i class="ti ti-circle-dot" aria-hidden="true"></i></div>
           <h3 class="cat-card__label" data-i18n="cat.coils">코일</h3>
         </a>
         <a href="#" class="cat-card reveal">
-          <div class="cat-card__icon">🎒</div>
+          <div class="cat-card__icon"><i class="ti ti-briefcase" aria-hidden="true"></i></div>
           <h3 class="cat-card__label" data-i18n="cat.accessories">액세서리</h3>
         </a>
       </div>
@@ -230,7 +242,7 @@
           <!-- PHONE: tap-to-call. Number is set in script.js (STORE_PHONE) -->
           <a id="call-link" href="#" class="btn btn--green">📞 전화하기 050713762074</a>
           <!-- KAKAO: replace href with real KakaoTalk channel link -->
-          <a href="#" class="btn btn--ghost" data-i18n="loc.kakao">💬 네이버 상담</a>
+          <a href="https://talk.naver.com/ct/w5t1uu?frm=mnmb&frm=nmb_detail#nafullscreen" class="btn btn--ghost" data-i18n="loc.kakao">💬 네이버 상담</a>
         </div>
       </div>
 
@@ -258,7 +270,17 @@
   <!-- ============================================================= -->
   <footer class="footer">
     <div class="footer__inner container">
-      <div class="footer__brand" data-i18n="footer.brand">위베이프 x 전담어때 영등포점</div>
+      <div class="footer__top">
+        <div class="footer__brand" data-i18n="footer.brand">위베이프 x 전담어때 영등포점</div>
+        <!-- INSTAGRAM: replace YOUR_HANDLE with the real Instagram handle (also in the header) -->
+        <a href="https://www.instagram.com/jeondam_ottae/" class="ig-link" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="2" y="2" width="20" height="20" rx="5.5"/>
+            <circle cx="12" cy="12" r="4.5"/>
+            <circle cx="17.5" cy="6.5" r="0.6" fill="currentColor"/>
+          </svg>
+        </a>
+      </div>
       <!-- FOOTER LEGAL: replace all placeholder numbers with real ones -->
       <ul class="footer__meta">
         <li data-i18n="footer.bizName">상호: 위베이프 x 전담어때 영등포점</li>
@@ -280,7 +302,7 @@
   <!-- FLOATING KAKAO BUTTON                                          -->
   <!-- ============================================================= -->
   <!-- FLOATING KAKAO: replace href with real KakaoTalk channel link -->
-  <a href="#" class="float-kakao" aria-label="카카오톡 상담하기" data-i18n-attr="aria-label:cta.kakao">
+  <a href="https://talk.naver.com/ct/w5t1uu?frm=mnmb&frm=nmb_detail#nafullscreen" class="float-kakao" aria-label="네이버 상담하기" data-i18n-attr="aria-label:cta.kakao">
     <span class="float-kakao__icon">💬</span>
     <span class="float-kakao__text" data-i18n="float.text">네이버 상담</span>
   </a>
