@@ -202,6 +202,40 @@ img { max-width: 100%; display: block; }
 }
 .header__nav a:hover { color: var(--green-bright); }
 
+.header__right { display: flex; align-items: center; gap: 10px; }
+
+/* ---------- Language switch (KO / EN / 中文) ---------- */
+.lang-switch {
+  display: inline-flex;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 2px;
+  background: rgba(17, 20, 18, 0.6);
+}
+.lang-switch button {
+  font-family: inherit;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--text-dim);
+  background: transparent;
+  border: 0;
+  border-radius: 999px;
+  padding: 5px 8px;
+  cursor: pointer;
+  transition: color 0.15s ease, background 0.15s ease;
+}
+.lang-switch button:hover { color: var(--green-bright); }
+.lang-switch button.is-active {
+  background: var(--grad-green);
+  color: #0b0c0b;
+}
+.age-gate__lang { display: flex; width: fit-content; margin: 0 auto 18px; }
+
+/* Chinese: prefer Simplified Chinese glyphs */
+html[lang="zh-CN"] body {
+  font-family: "Noto Sans SC", "Noto Sans KR", system-ui, sans-serif;
+}
+
 /* =================================================================
    HERO
    ================================================================= */
@@ -474,19 +508,40 @@ img { max-width: 100%; display: block; }
   font-weight: 700;
 }
 .location__actions { display: flex; flex-wrap: wrap; gap: 12px; }
+/* TEMPORARY static location card — swap for a real embedded map later. */
 .location__map {
   background:
-    repeating-linear-gradient(45deg, #1b1f1a 0 12px, #171a18 12px 24px);
+    radial-gradient(circle at 50% 35%, rgba(99, 153, 34, 0.14), transparent 60%),
+    var(--bg-3);
   border: 1px solid var(--line);
   border-radius: var(--radius);
+  box-shadow: 0 0 40px rgba(99, 153, 34, 0.12);
   min-height: 260px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: var(--text-faint);
-  font-size: 0.85rem;
+  gap: 16px;
   text-align: center;
-  padding: 20px;
+  padding: 32px 22px;
+  transition: border-color 0.2s ease, box-shadow 0.25s ease;
+}
+.location__map:hover {
+  border-color: var(--green);
+  box-shadow: 0 0 50px rgba(151, 196, 89, 0.2);
+}
+.location__map-pin {
+  width: 56px;
+  height: 56px;
+  color: var(--green-bright);
+  filter: drop-shadow(0 0 12px rgba(151, 196, 89, 0.45));
+}
+.location__map-addr {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text);
+  max-width: 320px;
+  word-break: keep-all;
 }
 
 /* =================================================================

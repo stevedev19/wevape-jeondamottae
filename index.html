@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>위베이프 x 전담어때 영등포점 · 영등포전자담배 · 전국 무료배송</title>
-  <meta name="description" content="위베이프 x 전담어때 영등포점 - 전자담배 기기, 액상, 코일, 액세서리. 전국 무료배송, 당일발송, 퀵서비스." />
+  <title data-i18n="meta.title">위베이프 x 전담어때 영등포점 · 영등포전자담배 · 전국 무료배송</title>
+  <meta name="description" data-i18n-attr="content:meta.desc" content="위베이프 x 전담어때 영등포점 - 전자담배 기기, 액상, 코일, 액세서리. 전국 무료배송, 당일발송, 퀵서비스." />
 
-  <!-- Google Font: Noto Sans KR (only external dependency) -->
+  <!-- Google Fonts: Noto Sans KR + Noto Sans SC for Chinese (only external dependency) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -20,17 +20,23 @@
   <!-- ============================================================= -->
   <div id="age-gate" class="age-gate" aria-hidden="true">
     <div class="age-gate__box" role="dialog" aria-modal="true" aria-labelledby="age-gate-title">
+      <!-- LANGUAGE SWITCH (synced with the header one) -->
+      <div class="lang-switch age-gate__lang" role="group" aria-label="Language">
+        <button type="button" data-lang="ko">KO</button>
+        <button type="button" data-lang="en">EN</button>
+        <button type="button" data-lang="zh">中文</button>
+      </div>
       <div class="age-gate__logo">WeVape</div>
-      <h2 id="age-gate-title" class="age-gate__title">만 19세 이상이십니까?</h2>
-      <p class="age-gate__desc">
+      <h2 id="age-gate-title" class="age-gate__title" data-i18n="age.title">만 19세 이상이십니까?</h2>
+      <p class="age-gate__desc" data-i18n="age.desc">
         본 사이트는 전자담배 관련 상품을 다루는 성인 전용 페이지입니다.<br />
         미성년자는 이용하실 수 없습니다.
       </p>
       <div class="age-gate__buttons">
-        <button id="age-yes" class="btn btn--green">예 (만 19세 이상)</button>
-        <button id="age-no" class="btn btn--ghost">아니오</button>
+        <button id="age-yes" class="btn btn--green" data-i18n="age.yes">예 (만 19세 이상)</button>
+        <button id="age-no" class="btn btn--ghost" data-i18n="age.no">아니오</button>
       </div>
-      <p class="age-gate__legal">청소년보호법에 따라 만 19세 미만 청소년에게 판매하지 않습니다.</p>
+      <p class="age-gate__legal" data-i18n="age.legal">청소년보호법에 따라 만 19세 미만 청소년에게 판매하지 않습니다.</p>
     </div>
   </div>
 
@@ -41,17 +47,25 @@
     <div class="header__inner container">
       <!-- LOGO PLACEHOLDER: swap this text for an <img> logo later -->
       <a href="#top" class="logo">
-        <span class="logo__mark">위베이프</span>
-        <span class="logo__sub">영등포점</span>
+        <span class="logo__mark" data-i18n="logo.mark">위베이프</span>
+        <span class="logo__sub" data-i18n="logo.sub">영등포점</span>
       </a>
       <nav class="header__nav">
-        <a href="#categories">카테고리</a>
-        <a href="#about">소개</a>
-        <a href="#blog">공지</a>
-        <a href="#location">오시는길</a>
+        <a href="#categories" data-i18n="nav.categories">카테고리</a>
+        <a href="#about" data-i18n="nav.about">소개</a>
+        <a href="#blog" data-i18n="nav.blog">공지</a>
+        <a href="#location" data-i18n="nav.location">오시는길</a>
       </nav>
-      <!-- HEADER CTA: replace href with real KakaoTalk channel link -->
-      <a href="#" class="btn btn--green btn--sm header__cta">카톡상담</a>
+      <div class="header__right">
+        <!-- LANGUAGE SWITCH -->
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button type="button" data-lang="ko">KO</button>
+          <button type="button" data-lang="en">EN</button>
+          <button type="button" data-lang="zh">中文</button>
+        </div>
+        <!-- HEADER CTA: replace href with real KakaoTalk channel link -->
+        <a href="#" class="btn btn--green btn--sm header__cta" data-i18n="header.cta">카톡상담</a>
+      </div>
     </div>
   </header>
 
@@ -69,21 +83,21 @@
       </div>
 
       <div class="hero__content container">
-        <p class="hero__eyebrow">WeVape · 영등포점</p>
-        <h1 class="hero__title">영등포전자담배<br /><span class="grad-text">전국 무료배송</span></h1>
-        <p class="hero__subtitle">
+        <p class="hero__eyebrow" data-i18n="hero.eyebrow">WeVape · 영등포점</p>
+        <h1 class="hero__title" data-i18n="hero.title">영등포전자담배<br /><span class="grad-text">전국 무료배송</span></h1>
+        <p class="hero__subtitle" data-i18n="hero.subtitle">
           기기부터 액상, 코일, 액세서리까지.<br />
           믿을 수 있는 정품만, 당일발송으로 빠르게 받아보세요.
         </p>
         <!-- HERO CTA: replace href with real KakaoTalk channel link -->
-        <a href="#" class="btn btn--green btn--lg">카카오톡 상담하기</a>
+        <a href="#" class="btn btn--green btn--lg" data-i18n="cta.kakao">카카오톡 상담하기</a>
       </div>
     </section>
 
     <!-- ============================================================= -->
     <!-- NOTICE TICKER (marquee) — text edited in script.js            -->
     <!-- ============================================================= -->
-    <div class="ticker" aria-label="공지사항">
+    <div class="ticker" aria-label="공지사항" data-i18n-attr="aria-label:ticker.label">
       <div class="ticker__label">NOTICE</div>
       <div class="ticker__viewport">
         <div id="ticker-track" class="ticker__track"><!-- injected by JS --></div>
@@ -96,23 +110,23 @@
     <section class="perks container">
       <div class="perk">
         <div class="perk__icon">🚚</div>
-        <h3 class="perk__title">무료배송</h3>
-        <p class="perk__desc">전국 어디든 무료로</p>
+        <h3 class="perk__title" data-i18n="perk.ship.title">무료배송</h3>
+        <p class="perk__desc" data-i18n="perk.ship.desc">전국 어디든 무료로</p>
       </div>
       <div class="perk">
         <div class="perk__icon">⚡</div>
-        <h3 class="perk__title">퀵서비스</h3>
-        <p class="perk__desc">급할 땐 퀵으로</p>
+        <h3 class="perk__title" data-i18n="perk.quick.title">퀵서비스</h3>
+        <p class="perk__desc" data-i18n="perk.quick.desc">급할 땐 퀵으로</p>
       </div>
       <div class="perk">
         <div class="perk__icon">🅿️</div>
-        <h3 class="perk__title">주차가능</h3>
-        <p class="perk__desc">매장 방문 주차 OK</p>
+        <h3 class="perk__title" data-i18n="perk.parking.title">주차가능</h3>
+        <p class="perk__desc" data-i18n="perk.parking.desc">매장 방문 주차 OK</p>
       </div>
       <div class="perk">
         <div class="perk__icon">📦</div>
-        <h3 class="perk__title">당일발송</h3>
-        <p class="perk__desc">오후 주문도 당일에</p>
+        <h3 class="perk__title" data-i18n="perk.sameday.title">당일발송</h3>
+        <p class="perk__desc" data-i18n="perk.sameday.desc">오후 주문도 당일에</p>
       </div>
     </section>
 
@@ -122,24 +136,25 @@
     <section id="about" class="about container reveal">
       <div class="about__text">
         <p class="section-eyebrow">ABOUT</p>
-        <h2 class="section-title">영등포 전자담배 전문 매장</h2>
+        <h2 class="section-title" data-i18n="about.title">영등포 전자담배 전문 매장</h2>
         <!-- ABOUT COPY: replace with your real store description -->
-        <p>
+        <p data-i18n="about.p1">
          위베이프 x 전담어때 영등포점은 정품 전자담배 기기와 액상, 코일, 액세서리를
           합리적인 가격에 제공하는 전문 매장입니다. 초보자부터 마니아까지,
           매장 전문 상담을 통해 나에게 맞는 제품을 찾아드립니다.
         </p>
-        <p>
+        <p data-i18n="about.p2">
           온라인 주문 시 전국 무료배송과 당일발송을 지원하며,
           영등포 인근은 퀵서비스로 더욱 빠르게 받아보실 수 있습니다.
         </p>
-        <a href="#location" class="btn btn--ghost btn--sm">매장 위치 보기</a>
+        <a href="#location" class="btn btn--ghost btn--sm" data-i18n="about.btn">매장 위치 보기</a>
       </div>
       <!-- ABOUT IMAGE: replace this gray box with a real store photo -->
       <div class="about__media">
   <img
     src="IMG2597.jpg"
     alt="매장 사진"
+    data-i18n-attr="alt:about.alt"
   />
 </div>
     </section>
@@ -149,23 +164,23 @@
     <!-- ============================================================= -->
     <section id="categories" class="categories container">
       <p class="section-eyebrow center">CATEGORY</p>
-      <h2 class="section-title center">카테고리</h2>
+      <h2 class="section-title center" data-i18n="cat.title">카테고리</h2>
       <div class="cat-grid">
         <a href="#" class="cat-card reveal">
           <div class="cat-card__icon">🔋</div>
-          <h3 class="cat-card__label">기기</h3>
+          <h3 class="cat-card__label" data-i18n="cat.devices">기기</h3>
         </a>
         <a href="#" class="cat-card reveal">
           <div class="cat-card__icon">💧</div>
-          <h3 class="cat-card__label">액상</h3>
+          <h3 class="cat-card__label" data-i18n="cat.liquids">액상</h3>
         </a>
         <a href="#" class="cat-card reveal">
           <div class="cat-card__icon">🧵</div>
-          <h3 class="cat-card__label">코일</h3>
+          <h3 class="cat-card__label" data-i18n="cat.coils">코일</h3>
         </a>
         <a href="#" class="cat-card reveal">
           <div class="cat-card__icon">🎒</div>
-          <h3 class="cat-card__label">액세서리</h3>
+          <h3 class="cat-card__label" data-i18n="cat.accessories">액세서리</h3>
         </a>
       </div>
     </section>
@@ -187,11 +202,11 @@
     <!-- ============================================================= -->
     <section id="blog" class="blog container">
       <p class="section-eyebrow center">BLOG</p>
-      <h2 class="section-title center">공지 &amp; 소식</h2>
+      <h2 class="section-title center" data-i18n="blog.title">공지 &amp; 소식</h2>
       <div id="blog-grid" class="blog-grid"><!-- injected by JS --></div>
       <div class="blog__more">
         <!-- MORE BUTTON: replace href with your blog/notice list page -->
-        <a href="https://m.blog.naver.com/mypage_5?tab=1" class="btn btn--ghost">더보기</a>
+        <a href="https://m.blog.naver.com/mypage_5?tab=1" class="btn btn--ghost" data-i18n="blog.more">더보기</a>
       </div>
     </section>
 
@@ -201,33 +216,40 @@
     <section id="location" class="location container reveal">
       <div class="location__info">
         <p class="section-eyebrow">LOCATION</p>
-        <h2 class="section-title">오시는 길 &amp; 문의</h2>
+        <h2 class="section-title" data-i18n="loc.title">오시는 길 &amp; 문의</h2>
 
         <!-- STORE ADDRESS: replace with real address -->
-        <p class="location__addr">서울특별시 영등포구 당산로 161 1층 위베이프 영등포점</p>
+        <p class="location__addr" data-i18n="loc.addr">서울특별시 영등포구 당산로 161 1층 위베이프 영등포점</p>
 
         <ul class="location__hours">
-          <li><span>영업시간</span> 매일 10:00 – 21:00</li>
-          <li><span>휴무날</span> 일요일 </li>
+          <li data-i18n="loc.hours"><span>영업시간</span> 매일 10:00 – 21:00</li>
+          <li data-i18n="loc.closed"><span>휴무날</span> 일요일 </li>
         </ul>
 
         <div class="location__actions">
           <!-- PHONE: tap-to-call. Number is set in script.js (STORE_PHONE) -->
           <a id="call-link" href="#" class="btn btn--green">📞 전화하기 050713762074</a>
           <!-- KAKAO: replace href with real KakaoTalk channel link -->
-          <a href="#" class="btn btn--ghost">💬 카카오톡 상담</a>
+          <a href="#" class="btn btn--ghost" data-i18n="loc.kakao">💬 카카오톡 상담</a>
         </div>
       </div>
 
-     <div class="location__map">
-  <a
-    href="https://kko.to/my55Uqo35J"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    카카오맵으로 위치 보기
-  </a>
-</div>
+      <!-- TEMPORARY LOCATION CARD: static placeholder (no map API needed).
+           A real embedded map (Kakao / Naver) can be swapped in here later. -->
+      <div class="location__map">
+        <svg class="location__map-pin" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/>
+        </svg>
+        <p class="location__map-addr">서울특별시 영등포구 당산로 161 1층 위베이프 영등포점</p>
+        <a
+          href="https://map.naver.com/p/search/서울특별시%20영등포구%20당산로%20161"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn--green btn--sm"
+          data-i18n="loc.map"
+        >네이버지도에서 보기</a>
+      </div>
+    </section>
 
   </main>
 
@@ -236,21 +258,21 @@
   <!-- ============================================================= -->
   <footer class="footer">
     <div class="footer__inner container">
-      <div class="footer__brand">위베이프 x 전담어때 영등포점</div>
+      <div class="footer__brand" data-i18n="footer.brand">위베이프 x 전담어때 영등포점</div>
       <!-- FOOTER LEGAL: replace all placeholder numbers with real ones -->
       <ul class="footer__meta">
-        <li>상호: 위베이프 x 전담어때 영등포점</li>
-        <li>대표: 홍길동</li>
-        <li>전화번호: 050713762074</li>
-        <li>통신판매업신고번호: 2026-서울영등포-0000</li>
-        <li>영업시간: 매일 10:00 – 21:00</li>
-        <li>주소: 서울특별시 영등포구 당산로 161 1층 위베이프 x 전담어때 영등포점</li>
+        <li data-i18n="footer.bizName">상호: 위베이프 x 전담어때 영등포점</li>
+        <li><span data-i18n="footer.rep">대표</span>: 홍길동</li>
+        <li><span data-i18n="footer.phone">전화번호</span>: 050713762074</li>
+        <li><span data-i18n="footer.regNo">통신판매업신고번호</span>: 2026-서울영등포-0000</li>
+        <li data-i18n="footer.hours">영업시간: 매일 10:00 – 21:00</li>
+        <li data-i18n="footer.addr">주소: 서울특별시 영등포구 당산로 161 1층 위베이프 x 전담어때 영등포점</li>
       </ul>
-      <p class="footer__notice">
+      <p class="footer__notice" data-i18n="footer.notice">
         본 사이트는 만 19세 이상 성인만 이용 가능하며, 청소년보호법에 따라
         미성년자에게 판매하지 않습니다.
       </p>
-      <p class="footer__copy">© 2026 WEVAPE x 전담어때 영등포점. All rights reserved.</p>
+      <p class="footer__copy" data-i18n="footer.copy">© 2026 WEVAPE x 전담어때 영등포점. All rights reserved.</p>
     </div>
   </footer>
 
@@ -258,9 +280,9 @@
   <!-- FLOATING KAKAO BUTTON                                          -->
   <!-- ============================================================= -->
   <!-- FLOATING KAKAO: replace href with real KakaoTalk channel link -->
-  <a href="#" class="float-kakao" aria-label="카카오톡 상담하기">
+  <a href="#" class="float-kakao" aria-label="카카오톡 상담하기" data-i18n-attr="aria-label:cta.kakao">
     <span class="float-kakao__icon">💬</span>
-    <span class="float-kakao__text">카톡상담</span>
+    <span class="float-kakao__text" data-i18n="float.text">카톡상담</span>
   </a>
 
   <script src="script.js"></script>
