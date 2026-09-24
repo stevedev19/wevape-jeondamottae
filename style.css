@@ -573,9 +573,9 @@ html[lang="zh-CN"] body {
 .footer__copy { font-size: 0.78rem; color: var(--text-faint); }
 
 /* =================================================================
-   FLOATING KAKAO BUTTON
+   FLOATING NAVER BUTTON
    ================================================================= */
-.float-kakao {
+.float-naver {
   position: fixed;
   right: 18px;
   bottom: 18px;
@@ -592,11 +592,11 @@ html[lang="zh-CN"] body {
   box-shadow: 0 8px 24px rgba(99, 153, 34, 0.4);
   transition: transform 0.15s ease, box-shadow 0.2s ease;
 }
-.float-kakao:hover {
+.float-naver:hover {
   transform: translateY(-3px) scale(1.03);
   box-shadow: 0 12px 32px rgba(151, 196, 89, 0.55);
 }
-.float-kakao__icon { font-size: 1.15rem; }
+.float-naver__icon { font-size: 1.15rem; }
 
 /* =================================================================
    SCROLL REVEAL (Intersection Observer adds .is-visible)
@@ -621,7 +621,7 @@ html[lang="zh-CN"] body {
   .cat-grid { grid-template-columns: repeat(4, 1fr); }
   .blog-grid { grid-template-columns: repeat(3, 1fr); }
   .location { grid-template-columns: 1fr 1.1fr; }
-  .float-kakao { right: 26px; bottom: 26px; }
+  .float-naver { right: 26px; bottom: 26px; }
 }
 
 @media (min-width: 1024px) {

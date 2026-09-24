@@ -23,21 +23,21 @@ const NOTICES = {
     "⚡ 영등포 인근 퀵서비스 가능 — 당일 수령",
     "📦 오후 3시 이전 주문 시 당일발송",
     "🎁 신규 회원 첫 구매 사은품 증정",
-    "💬 제품 상담은 카카오톡으로 편하게 문의하세요",
+    "💬 제품 상담은 네이버로 편하게 문의하세요",
   ],
   en: [
     "🚚 Free nationwide shipping on all products!",
     "⚡ Quick delivery near Yeongdeungpo — get it today",
     "📦 Order before 3 PM for same-day dispatch",
     "🎁 Free gift with new members' first purchase",
-    "💬 Questions about products? Ask us on KakaoTalk",
+    "💬 Questions about products? Ask us on Naver",
   ],
   zh: [
     "🚚 全场商品全国免费配送！",
     "⚡ 永登浦附近可闪送 — 当日收货",
     "📦 下午3点前下单，当日发货",
     "🎁 新会员首次购物赠送礼品",
-    "💬 产品咨询请通过 KakaoTalk 联系我们",
+    "💬 产品咨询请通过 Naver 联系我们",
   ],
 };
 
@@ -113,7 +113,7 @@ const TRANSLATIONS = {
     "hero.eyebrow": "WeVape · Yeongdeungpo",
     "hero.title": "Yeongdeungpo E-Cigarettes<br /><span class=\"grad-text\">Free Nationwide Shipping</span>",
     "hero.subtitle": "Devices, e-liquids, coils and accessories.<br />Genuine products only, shipped the same day.",
-    "cta.kakao": "Chat on KakaoTalk",
+    "cta.naver": "Chat on Naver",
 
     "ticker.label": "Notices",
 
@@ -145,7 +145,7 @@ const TRANSLATIONS = {
     "loc.addr": "WeVape Yeongdeungpo, 1F, 161 Dangsan-ro, Yeongdeungpo-gu, Seoul",
     "loc.hours": "<span>Hours</span> Daily 10:00 – 21:00",
     "loc.closed": "<span>Closed</span> Sunday",
-    "loc.kakao": "💬 KakaoTalk Chat",
+    "loc.naver": "💬 Naver Chat",
     "loc.map": "View on Naver Map",
 
     "footer.brand": "WeVape x Jeondam-eottae Yeongdeungpo",
@@ -158,7 +158,7 @@ const TRANSLATIONS = {
     "footer.notice": "This site is for adults aged 19 and over only. Under the Juvenile Protection Act, we do not sell to minors.",
     "footer.copy": "© 2026 WEVAPE x Jeondam-eottae Yeongdeungpo. All rights reserved.",
 
-    "float.text": "KakaoTalk",
+    "float.text": "Naver",
   },
 
   zh: {
@@ -182,7 +182,7 @@ const TRANSLATIONS = {
     "hero.eyebrow": "WeVape · 永登浦店",
     "hero.title": "永登浦电子烟<br /><span class=\"grad-text\">全国免费配送</span>",
     "hero.subtitle": "从设备到烟油、雾化芯和配件，一应俱全。<br />只售正品，当日发货，快速送达。",
-    "cta.kakao": "KakaoTalk 咨询",
+    "cta.naver": "Naver 咨询",
 
     "ticker.label": "公告",
 
@@ -214,7 +214,7 @@ const TRANSLATIONS = {
     "loc.addr": "首尔特别市永登浦区堂山路161号 1层 WeVape 永登浦店",
     "loc.hours": "<span>营业时间</span> 每天 10:00 – 21:00",
     "loc.closed": "<span>休息日</span> 周日",
-    "loc.kakao": "💬 KakaoTalk 咨询",
+    "loc.naver": "💬 Naver 咨询",
     "loc.map": "在 Naver 地图中查看",
 
     "footer.brand": "WeVape x Jeondam-eottae 永登浦店",
@@ -227,7 +227,7 @@ const TRANSLATIONS = {
     "footer.notice": "本网站仅限年满19周岁的成年人使用。根据韩国《青少年保护法》，我们不向未成年人出售商品。",
     "footer.copy": "© 2026 WEVAPE x Jeondam-eottae 永登浦店。保留所有权利。",
 
-    "float.text": "KakaoTalk 咨询",
+    "float.text": "Naver 咨询",
   },
 };
 
