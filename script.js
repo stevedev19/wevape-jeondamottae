@@ -15,6 +15,9 @@ const STORE_PHONE = {
   display: "0507-1376-2074",  // ← how it appears on screen
 };
 
+// WeChat ID — the Chinese (中文) version shows WeChat instead of Naver chat.
+const WECHAT_ID = "e_cig_kr";
+
 // Notice ticker — add/remove lines freely. They rotate in the marquee.
 // One list per language: ko = 한국어, en = English, zh = 中文.
 const NOTICES = {
@@ -37,7 +40,7 @@ const NOTICES = {
     "⚡ 永登浦附近可闪送 — 当日收货",
     "📦 下午3点前下单，当日发货",
     "🎁 新会员首次购物赠送礼品",
-    "💬 产品咨询请通过 Naver 联系我们",
+    "💬 产品咨询请添加微信：e_cig_kr",
   ],
 };
 
@@ -177,12 +180,13 @@ const TRANSLATIONS = {
     "nav.about": "关于我们",
     "nav.blog": "公告",
     "nav.location": "交通指南",
-    "header.cta": "咨询",
+    "header.cta": "微信咨询",
+    "contact.href": "weixin://dl/chat?e_cig_kr",
 
     "hero.eyebrow": "WeVape · 永登浦店",
     "hero.title": "永登浦电子烟<br /><span class=\"grad-text\">全国免费配送</span>",
     "hero.subtitle": "从设备到烟油、雾化芯和配件，一应俱全。<br />只售正品，当日发货，快速送达。",
-    "cta.naver": "Naver 咨询",
+    "cta.naver": "微信咨询 (e_cig_kr)",
 
     "ticker.label": "公告",
 
@@ -214,7 +218,7 @@ const TRANSLATIONS = {
     "loc.addr": "首尔特别市永登浦区堂山路161号 1层 WeVape 永登浦店",
     "loc.hours": "<span>营业时间</span> 每天 10:00 – 21:00",
     "loc.closed": "<span>休息日</span> 周日",
-    "loc.naver": "💬 Naver 咨询",
+    "loc.naver": "💬 微信咨询：e_cig_kr",
     "loc.map": "在 Naver 地图中查看",
 
     "footer.brand": "WeVape x Jeondam-eottae 永登浦店",
@@ -227,7 +231,7 @@ const TRANSLATIONS = {
     "footer.notice": "本网站仅限年满19周岁的成年人使用。根据韩国《青少年保护法》，我们不向未成年人出售商品。",
     "footer.copy": "© 2026 WEVAPE x Jeondam-eottae 永登浦店。保留所有权利。",
 
-    "float.text": "Naver 咨询",
+    "float.text": "微信咨询",
   },
 };
 
@@ -391,6 +395,20 @@ function buildBlog(lang) {
   });
 
   apply(initial);
+})();
+
+/* ---------- 4c. WeChat contact (中文 only) ---------- */
+// There is no reliable web link that opens a specific WeChat chat, so on
+// click we copy the WeChat ID to the clipboard, tell the user, then let
+// the weixin:// link open the WeChat app so they can paste it in search.
+(function wechatContact() {
+  document.querySelectorAll("[data-contact]").forEach((el) => {
+    el.addEventListener("click", () => {
+      if (document.documentElement.lang !== "zh-CN") return;
+      if (navigator.clipboard) navigator.clipboard.writeText(WECHAT_ID).catch(() => {});
+      alert(`微信号 ${WECHAT_ID} 已复制，请在微信中搜索添加。`);
+    });
+  });
 })();
 
 /* ---------- 5. Tap-to-call phone link ---------- */
