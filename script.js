@@ -285,39 +285,6 @@ const TRANSLATIONS = {
   window.addEventListener("scroll", onScroll, { passive: true });
 })();
 
-/* ---------- 2b. Mobile menu (hamburger, < 768px) ---------- */
-(function mobileMenu() {
-  const header = document.getElementById("site-header");
-  const toggle = document.getElementById("menu-toggle");
-  const menu = document.getElementById("mobile-menu");
-  if (!toggle || !menu) return;
-
-  const setOpen = (open) => {
-    menu.hidden = !open;
-    toggle.setAttribute("aria-expanded", open);
-    header.classList.toggle("is-menu-open", open);
-  };
-
-  toggle.addEventListener("click", () => setOpen(menu.hidden));
-  // Close after picking a section link.
-  menu.querySelectorAll("a[href^='#']").forEach((a) =>
-    a.addEventListener("click", () => setOpen(false))
-  );
-  // Close on Escape, outside tap, or when resized up to desktop.
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && !menu.hidden) {
-      setOpen(false);
-      toggle.focus();
-    }
-  });
-  document.addEventListener("click", (e) => {
-    if (!menu.hidden && !header.contains(e.target)) setOpen(false);
-  });
-  window.matchMedia("(min-width: 768px)").addEventListener("change", (e) => {
-    if (e.matches) setOpen(false);
-  });
-})();
-
 /* ---------- 3. Notice ticker ---------- */
 function buildTicker(lang) {
   const track = document.getElementById("ticker-track");
