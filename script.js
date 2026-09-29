@@ -37,7 +37,7 @@ const NOTICES = {
     "⚡ 永登浦附近可闪送 — 当日收货",
     "📦 下午3点前下单，当日发货",
     "🎁 新会员首次购物赠送礼品",
-    "💬 产品咨询请通过 Naver 联系我们",
+    "💬 产品咨询请通过微信联系我们（微信号：e_cig_kr）",
   ],
 };
 
@@ -159,6 +159,13 @@ const TRANSLATIONS = {
     "footer.copy": "© 2026 WEVAPE x Jeondam-eottae Yeongdeungpo. All rights reserved.",
 
     "float.text": "Naver",
+
+    "wechat.title": "Scan with WeChat to add us",
+    "wechat.idLabel": "WeChat ID",
+    "wechat.copy": "Copy WeChat ID",
+    "wechat.copied": "Copied ✓",
+    "wechat.copyFail": "Please copy the ID manually",
+    "wechat.close": "Close",
   },
 
   zh: {
@@ -182,7 +189,7 @@ const TRANSLATIONS = {
     "hero.eyebrow": "WeVape · 永登浦店",
     "hero.title": "永登浦电子烟<br /><span class=\"grad-text\">全国免费配送</span>",
     "hero.subtitle": "从设备到烟油、雾化芯和配件，一应俱全。<br />只售正品，当日发货，快速送达。",
-    "cta.naver": "Naver 咨询",
+    "cta.naver": "微信咨询",
 
     "ticker.label": "公告",
 
@@ -214,7 +221,7 @@ const TRANSLATIONS = {
     "loc.addr": "首尔特别市永登浦区堂山路161号 1层 WeVape 永登浦店",
     "loc.hours": "<span>营业时间</span> 每天 10:00 – 21:00",
     "loc.closed": "<span>休息日</span> 周日",
-    "loc.naver": "💬 Naver 咨询",
+    "loc.naver": "💬 微信咨询",
     "loc.map": "在 Naver 地图中查看",
 
     "footer.brand": "WeVape x Jeondam-eottae 永登浦店",
@@ -227,7 +234,14 @@ const TRANSLATIONS = {
     "footer.notice": "本网站仅限年满19周岁的成年人使用。根据韩国《青少年保护法》，我们不向未成年人出售商品。",
     "footer.copy": "© 2026 WEVAPE x Jeondam-eottae 永登浦店。保留所有权利。",
 
-    "float.text": "Naver 咨询",
+    "float.text": "微信咨询",
+
+    "wechat.title": "微信扫码添加好友",
+    "wechat.idLabel": "微信号",
+    "wechat.copy": "复制微信号",
+    "wechat.copied": "已复制 ✓",
+    "wechat.copyFail": "请长按微信号手动复制",
+    "wechat.close": "关闭",
   },
 };
 
@@ -338,6 +352,57 @@ function buildBlog(lang) {
   ).join("");
 }
 
+/* ---------- 4a. WeChat QR popup (Chinese chat buttons) ---------- */
+(function wechatPopup() {
+  const modal = document.getElementById("wechat-modal");
+  const closeBtn = document.getElementById("wechat-close");
+  const copyBtn = document.getElementById("wechat-copy");
+  const WECHAT_ID = "e_cig_kr";
+  let opener = null;
+
+  // Current-language text for labels the script sets itself.
+  const t = (key) => {
+    const lang = { en: "en", "zh-CN": "zh" }[document.documentElement.lang];
+    return (TRANSLATIONS[lang] || {})[key];
+  };
+
+  function open(trigger) {
+    opener = trigger;
+    copyBtn.textContent = t("wechat.copy") ?? "위챗 ID 복사";
+    modal.hidden = false;
+    document.body.style.overflow = "hidden";
+    closeBtn.focus();
+  }
+
+  function close() {
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.body.style.overflow = "";
+    if (opener) opener.focus();
+  }
+
+  document.querySelectorAll("[data-chat-link]").forEach((el) => {
+    el.addEventListener("click", (e) => {
+      if (el.getAttribute("href") !== "#wechat") return;
+      e.preventDefault();
+      open(el);
+    });
+  });
+
+  closeBtn.addEventListener("click", close);
+  modal.addEventListener("click", (e) => { if (e.target === modal) close(); });
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape") close(); });
+
+  copyBtn.addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText(WECHAT_ID);
+      copyBtn.textContent = t("wechat.copied") ?? "복사됨 ✓";
+    } catch {
+      copyBtn.textContent = t("wechat.copyFail") ?? "위챗 ID를 직접 복사해 주세요";
+    }
+  });
+})();
+
 /* ---------- 4b. Language switch (ENG / KOR / 中文) ---------- */
 (function languageSwitch() {
   const KEY = "wevape_lang";
@@ -366,6 +431,13 @@ function buildBlog(lang) {
         if (!(attr in saved)) saved[attr] = el.getAttribute(attr);
         el.setAttribute(attr, dict[key] ?? saved[attr]);
       });
+    });
+
+    // Chat buttons: Naver link, except on the Chinese page where they
+    // open the WeChat QR popup (see 4a).
+    document.querySelectorAll("[data-chat-link]").forEach((el) => {
+      if (!el.dataset.naverHref) el.dataset.naverHref = el.getAttribute("href");
+      el.setAttribute("href", lang === "zh" ? "#wechat" : el.dataset.naverHref);
     });
 
     buildTicker(lang);
