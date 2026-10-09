@@ -6,38 +6,67 @@
   <title data-i18n="meta.title">위베이프 x 전담어때 영등포점 · 영등포전자담배 · 전국 무료배송</title>
   <meta name="description" data-i18n-attr="content:meta.desc" content="위베이프 x 전담어때 영등포점 - 전자담배 기기, 액상, 코일, 액세서리. 전국 무료배송, 당일발송, 퀵서비스." />
 
-  <!-- Google Fonts: Noto Sans KR + Noto Sans SC for Chinese -->
+  <!-- Age gate: skip it before first paint if this browser already confirmed. -->
+  <script>
+    try { if (localStorage.getItem("wevape_age_verified")) document.documentElement.classList.add("age-ok"); } catch (e) {}
+  </script>
+
+  <!-- Google Fonts: IBM Plex Sans KR (Korean + Latin), Noto Sans SC (variable) for the Chinese page -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;700&family=Noto+Sans+SC:wght@100..900&display=swap" rel="stylesheet" />
+  <!-- Noto Sans KR (variable 100-900), subset to the hero's first line only (~25 KB): drives its weight animation.
+       If that line's KO/EN text changes, update the text= list. -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&text=%EC%98%81%EB%93%B1%ED%8F%AC%EC%A0%84%EC%9E%90%EB%8B%B4%EB%B0%B0YeongdugpoE-Ciar&display=swap" rel="stylesheet" />
 
-  <!-- Tabler Icons webfont (outline icon set used for perks + categories) -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.48.0/dist/tabler-icons.min.css" />
-
-  <link rel="stylesheet" href="style.css?v=3" />
+  <link rel="stylesheet" href="style.css?v=10" />
 </head>
 <body>
 
+  <!-- Icon set: 24px grid, 2px round strokes. Use <svg class="icon"><use href="#i-name"/></svg>. -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20.5l1.4-4.6A8 8 0 1 1 21 12z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="0.6"/></symbol>
+    <symbol id="i-truck" viewBox="0 0 24 24"><path d="M2 6h11v10H2zM13 10h4l4 4v2h-8z"/><circle cx="6.5" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></symbol>
+    <symbol id="i-parking" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M10 17V7h3.5a3 3 0 0 1 0 6H10"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24"><path d="M9 5v14M15 5v14"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 5l12 7-12 7z"/></symbol>
+  </svg>
+
   <!-- ============================================================= -->
-  <!-- AGE VERIFICATION MODAL (shown on first load per session)      -->
+  <!-- AGE VERIFICATION: shown before any content until confirmed    -->
   <!-- ============================================================= -->
-  <div id="age-gate" class="age-gate" aria-hidden="true">
-    <div class="age-gate__box" role="dialog" aria-modal="true" aria-labelledby="age-gate-title">
+  <div id="age-gate" class="age-gate">
+    <div class="age-gate__box" role="dialog" aria-modal="true" aria-labelledby="age-gate-title" aria-describedby="age-gate-desc">
       <!-- LANGUAGE SWITCH (synced with the header one) -->
       <div class="lang-switch age-gate__lang" role="group" aria-label="Language">
         <button type="button" data-lang="en">ENG</button>
         <button type="button" data-lang="ko">KOR</button>
         <button type="button" data-lang="zh">中文</button>
       </div>
-      <div class="age-gate__logo">WeVape</div>
-      <h2 id="age-gate-title" class="age-gate__title" data-i18n="age.title">만 19세 이상이십니까?</h2>
-      <p class="age-gate__desc" data-i18n="age.desc">
-        본 사이트는 전자담배 관련 상품을 다루는 성인 전용 페이지입니다.<br />
-        미성년자는 이용하실 수 없습니다.
-      </p>
-      <div class="age-gate__buttons">
-        <button id="age-yes" class="btn btn--green" data-i18n="age.yes">예 (만 19세 이상)</button>
-        <button id="age-no" class="btn btn--ghost" data-i18n="age.no">아니오</button>
+      <p class="age-gate__logo" data-i18n="logo.mark">위베이프</p>
+      <div id="age-gate-ask" class="age-gate__ask">
+        <h2 id="age-gate-title" class="age-gate__title" tabindex="-1" data-i18n="age.title">만 19세 이상이십니까?</h2>
+        <p id="age-gate-desc" class="age-gate__desc" data-i18n="age.desc">
+          본 사이트는 전자담배 관련 상품을 다루는 성인 전용 페이지입니다.<br />
+          미성년자는 이용하실 수 없습니다.
+        </p>
+        <div class="age-gate__buttons">
+          <button type="button" id="age-yes" class="btn btn--green" data-i18n="age.yes">예, 만 19세 이상입니다</button>
+          <button type="button" id="age-no" class="btn btn--ghost" data-i18n="age.no">아니오</button>
+        </div>
+      </div>
+      <div id="age-gate-denied" class="age-gate__denied" hidden>
+        <h2 id="age-gate-denied-title" class="age-gate__title" tabindex="-1" data-i18n="age.deniedTitle">이용하실 수 없습니다</h2>
+        <p class="age-gate__desc" data-i18n="age.deniedDesc">
+          만 19세 미만은 이 사이트를 볼 수 없고, 매장에서도 구매할 수 없습니다.
+        </p>
+        <a href="https://www.naver.com" class="btn btn--ghost" data-i18n="age.leave">네이버로 이동</a>
       </div>
       <p class="age-gate__legal" data-i18n="age.legal">청소년보호법에 따라 만 19세 미만 청소년에게 판매하지 않습니다.</p>
     </div>
@@ -54,7 +83,7 @@
         <span class="logo__sub" data-i18n="logo.sub">영등포점</span>
       </a>
       <nav class="header__nav">
-        <a href="#categories" data-i18n="nav.categories">카테고리</a>
+        <a href="#categories" data-i18n="nav.categories">판매 품목</a>
         <a href="#about" data-i18n="nav.about">소개</a>
         <a href="#blog" data-i18n="nav.blog">공지</a>
         <a href="#location" data-i18n="nav.location">오시는길</a>
@@ -70,11 +99,7 @@
         <a href="https://talk.naver.com/ct/w5t1uu?frm=mnmb&frm=nmb_detail#nafullscreen" class="btn btn--green btn--sm header__cta" data-i18n="header.cta">네이버 상담</a> -->
         <!-- INSTAGRAM: replace YOUR_HANDLE with the real Instagram handle (also in the footer) -->
         <a href="https://www.instagram.com/jeondam_ottae/" class="ig-link ig-link--sm" target="_blank" rel="noopener" aria-label="Instagram">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <rect x="2" y="2" width="20" height="20" rx="5.5"/>
-            <circle cx="12" cy="12" r="4.5"/>
-            <circle cx="17.5" cy="6.5" r="0.6" fill="currentColor"/>
-          </svg>
+          <svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg>
         </a>
       </div>
     </div>
@@ -101,125 +126,82 @@
           <button type="button" data-lang="ko">KOR</button>
           <button type="button" data-lang="zh">中文</button>
         </div>
-        <p class="hero__eyebrow" data-i18n="hero.eyebrow">WeVape · 영등포점</p>
-        <h1 class="hero__title" data-i18n="hero.title">영등포전자담배<br /><span class="grad-text">전국 무료배송</span></h1>
-        <p class="hero__subtitle" data-i18n="hero.subtitle">
-          기기부터 액상, 코일, 액세서리까지.<br />
-          믿을 수 있는 정품만, 당일발송으로 빠르게 받아보세요.
-        </p>
-        <!-- HERO CTA: replace href with real KakaoTalk channel link -->
-        <a href="https://talk.naver.com/ct/w5t1uu?frm=mnmb&frm=nmb_detail#nafullscreen" class="btn btn--green btn--lg" data-chat-link data-i18n="cta.naver">네이버 상담하기</a>
+        <h1 class="hero__title" data-i18n="hero.title"><span class="hero__line1">영등포전자담배</span><br /><span class="text-shimmer">전국 무료배송</span></h1>
+        <p class="hero__subtitle" data-i18n="hero.subtitle">기기, 액상, 코일, 액세서리를 매장과 온라인에서 판매합니다.</p>
+        <!-- SERVICE CHIPS: fill in quick-service area/time and parking details when known -->
+        <ul class="chips">
+          <li class="chip"><svg class="icon" aria-hidden="true"><use href="#i-truck"/></svg><span class="visually-hidden" data-i18n="svc.ship.label">배송</span><span data-i18n="svc.ship">전국 무료배송 · 오후 3시 전 주문 당일발송</span></li>
+          <li class="chip"><svg class="icon" aria-hidden="true"><use href="#i-bolt"/></svg><span class="visually-hidden" data-i18n="svc.quick.label">퀵</span><span data-i18n="svc.quick">영등포 인근 퀵서비스, 당일 수령</span></li>
+          <li class="chip"><svg class="icon" aria-hidden="true"><use href="#i-parking"/></svg><span class="visually-hidden" data-i18n="svc.parking.label">주차</span><span data-i18n="svc.parking">매장 방문 시 주차 가능</span></li>
+        </ul>
+        <div class="hero__actions">
+          <a href="https://talk.naver.com/ct/w5t1uu?frm=mnmb&frm=nmb_detail#nafullscreen" class="btn btn--green btn--lg hero__cta" data-chat-link data-i18n="cta.naver">네이버 상담하기</a>
+          <a href="#categories" class="btn btn--ghost btn--lg" data-i18n="hero.products">판매 품목 보기</a>
+        </div>
+        <p class="hero__age" data-i18n="hero.age">만 19세 이상만 이용할 수 있습니다</p>
       </div>
     </section>
 
     <!-- ============================================================= -->
-    <!-- NOTICE TICKER (marquee) — text edited in script.js            -->
+    <!-- NOTICE TICKER (marquee) · text edited in script.js            -->
     <!-- ============================================================= -->
     <div class="ticker" aria-label="공지사항" data-i18n-attr="aria-label:ticker.label">
-      <div class="ticker__label">NOTICE</div>
+      <div class="ticker__label" data-i18n="ticker.title">공지</div>
       <div class="ticker__viewport">
         <div id="ticker-track" class="ticker__track"><!-- injected by JS --></div>
       </div>
+      <button type="button" id="ticker-toggle" class="ticker__toggle" aria-pressed="false" aria-label="공지 멈춤" data-i18n-attr="aria-label:ticker.pause">
+        <svg class="icon icon-pause" aria-hidden="true"><use href="#i-pause"/></svg>
+        <svg class="icon icon-play" aria-hidden="true"><use href="#i-play"/></svg>
+      </button>
     </div>
 
-    <!-- ============================================================= -->
-    <!-- PERKS ROW                                                     -->
-    <!-- ============================================================= -->
-    <section class="perks container">
-      <div class="perk">
-        <div class="perk__icon"><i class="ti ti-truck" aria-hidden="true"></i></div>
-        <h3 class="perk__title" data-i18n="perk.ship.title">무료배송</h3>
-        <p class="perk__desc" data-i18n="perk.ship.desc">전국 어디든 무료로</p>
-      </div>
-      <div class="perk">
-        <div class="perk__icon"><i class="ti ti-bolt" aria-hidden="true"></i></div>
-        <h3 class="perk__title" data-i18n="perk.quick.title">퀵서비스</h3>
-        <p class="perk__desc" data-i18n="perk.quick.desc">급할 땐 퀵으로</p>
-      </div>
-      <div class="perk">
-        <div class="perk__icon"><i class="ti ti-parking" aria-hidden="true"></i></div>
-        <h3 class="perk__title" data-i18n="perk.parking.title">주차가능</h3>
-        <p class="perk__desc" data-i18n="perk.parking.desc">매장 방문 주차 OK</p>
-      </div>
-      <div class="perk">
-        <div class="perk__icon"><i class="ti ti-package" aria-hidden="true"></i></div>
-        <h3 class="perk__title" data-i18n="perk.sameday.title">당일발송</h3>
-        <p class="perk__desc" data-i18n="perk.sameday.desc">오후 주문도 당일에</p>
-      </div>
-    </section>
 
     <!-- ============================================================= -->
     <!-- ABOUT                                                         -->
     <!-- ============================================================= -->
-    <section id="about" class="about container reveal">
+    <section id="about" class="about container">
       <div class="about__text">
-        <p class="section-eyebrow">ABOUT</p>
-        <h2 class="section-title" data-i18n="about.title">영등포 전자담배 전문 매장</h2>
-        <!-- ABOUT COPY: replace with your real store description -->
+        <h2 class="section-title" data-i18n="about.title">당산로 161, 1층</h2>
         <p data-i18n="about.p1">
-         위베이프 x 전담어때 영등포점은 정품 전자담배 기기와 액상, 코일, 액세서리를
-          합리적인 가격에 제공하는 전문 매장입니다. 초보자부터 마니아까지,
-          매장 전문 상담을 통해 나에게 맞는 제품을 찾아드립니다.
-        </p>
-        <p data-i18n="about.p2">
-          온라인 주문 시 전국 무료배송과 당일발송을 지원하며,
-          영등포 인근은 퀵서비스로 더욱 빠르게 받아보실 수 있습니다.
+          위베이프 x 전담어때 영등포점은 전자담배 기기, 액상, 코일, 액세서리를 판매합니다.
+          구매 전에 매장이나 네이버 상담으로 제품에 대해 물어보세요.
         </p>
         <a href="#location" class="btn btn--ghost btn--sm" data-i18n="about.btn">매장 위치 보기</a>
       </div>
-      <!-- ABOUT IMAGE: replace this gray box with a real store photo -->
       <div class="about__media">
-  <img
-    src="IMG2597.jpg"
-    alt="매장 사진"
-    data-i18n-attr="alt:about.alt"
-  />
-</div>
+        <img src="IMG2597.jpg" alt="매장 사진" data-i18n-attr="alt:about.alt" loading="lazy" />
+      </div>
     </section>
 
     <!-- ============================================================= -->
     <!-- CATEGORY GRID                                                 -->
     <!-- ============================================================= -->
     <section id="categories" class="categories container">
-      <p class="section-eyebrow center">CATEGORY</p>
-      <h2 class="section-title center" data-i18n="cat.title">카테고리</h2>
-      <div class="cat-grid">
-        <a href="#" class="cat-card reveal">
-          <div class="cat-card__icon"><i class="ti ti-device-mobile" aria-hidden="true"></i></div>
-          <h3 class="cat-card__label" data-i18n="cat.devices">기기</h3>
-        </a>
-        <a href="#" class="cat-card reveal">
-          <div class="cat-card__icon"><i class="ti ti-droplet" aria-hidden="true"></i></div>
-          <h3 class="cat-card__label" data-i18n="cat.liquids">액상</h3>
-        </a>
-        <a href="#" class="cat-card reveal">
-          <div class="cat-card__icon"><i class="ti ti-circle-dot" aria-hidden="true"></i></div>
-          <h3 class="cat-card__label" data-i18n="cat.coils">코일</h3>
-        </a>
-        <a href="#" class="cat-card reveal">
-          <div class="cat-card__icon"><i class="ti ti-briefcase" aria-hidden="true"></i></div>
-          <h3 class="cat-card__label" data-i18n="cat.accessories">액세서리</h3>
-        </a>
-      </div>
+      <h2 class="section-title center" data-i18n="cat.title">판매 품목</h2>
+      <ul class="cat-list">
+        <li class="cat-item" data-i18n="cat.devices">기기</li>
+        <li class="cat-item" data-i18n="cat.liquids">액상</li>
+        <li class="cat-item" data-i18n="cat.coils">코일</li>
+        <li class="cat-item" data-i18n="cat.accessories">액세서리</li>
+      </ul>
     </section>
 
     <!-- ============================================================= -->
     <!-- BRAND STRIP                                                   -->
     <!-- ============================================================= -->
     <section class="brands">
-      <div class="brands__inner container">
-        <!-- BRAND PLACEHOLDERS: swap for real brand logos later -->
-        <span class="brand">RELX</span>
-        <span class="brand">WAKO</span>
-        <span class="brand">ACE</span>
-      </div>
+      <ul class="brands__inner container" aria-label="취급 브랜드" data-i18n-attr="aria-label:brands.label">
+        <li class="brand">RELX</li>
+        <li class="brand">WAKO</li>
+        <li class="brand">ACE</li>
+      </ul>
     </section>
 
     <!-- ============================================================= -->
-    <!-- BLOG / NOTICE — cards edited in script.js                     -->
+    <!-- BLOG / NOTICE · cards edited in script.js                     -->
     <!-- ============================================================= -->
     <section id="blog" class="blog container">
-      <p class="section-eyebrow center">BLOG</p>
       <h2 class="section-title center" data-i18n="blog.title">공지 &amp; 소식</h2>
       <div id="blog-grid" class="blog-grid"><!-- injected by JS --></div>
       <div class="blog__more">
@@ -231,9 +213,8 @@
     <!-- ============================================================= -->
     <!-- LOCATION & CONTACT                                            -->
     <!-- ============================================================= -->
-    <section id="location" class="location container reveal">
+    <section id="location" class="location container">
       <div class="location__info">
-        <p class="section-eyebrow">LOCATION</p>
         <h2 class="section-title" data-i18n="loc.title">오시는 길 &amp; 문의</h2>
 
         <!-- STORE ADDRESS: replace with real address -->
@@ -246,18 +227,16 @@
 
         <div class="location__actions">
           <!-- PHONE: tap-to-call. Number is set in script.js (STORE_PHONE) -->
-          <a id="call-link" href="#" class="btn btn--green">📞 전화하기 050713762074</a>
+          <a id="call-link" href="tel:050713762074" class="btn btn--green"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg><span>0507-1376-2074</span></a>
           <!-- KAKAO: replace href with real KakaoTalk channel link -->
-          <a href="https://talk.naver.com/ct/w5t1uu?frm=mnmb&frm=nmb_detail#nafullscreen" class="btn btn--ghost" data-chat-link data-i18n="loc.naver">💬 네이버 상담</a>
+          <a href="https://talk.naver.com/ct/w5t1uu?frm=mnmb&frm=nmb_detail#nafullscreen" class="btn btn--ghost" data-chat-link><svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg><span data-i18n="loc.naver">네이버 상담</span></a>
         </div>
       </div>
 
       <!-- TEMPORARY LOCATION CARD: static placeholder (no map API needed).
            A real embedded map (Kakao / Naver) can be swapped in here later. -->
       <div class="location__map">
-        <svg class="location__map-pin" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-          <path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/>
-        </svg>
+        <svg class="icon location__map-pin" aria-hidden="true"><use href="#i-pin"/></svg>
         <p class="location__map-addr">서울특별시 영등포구 당산로 161 1층 위베이프 영등포점</p>
         <a
           href="https://map.naver.com/p/search/서울특별시%20영등포구%20당산로%20161"
@@ -280,11 +259,7 @@
         <div class="footer__brand" data-i18n="footer.brand">위베이프 x 전담어때 영등포점</div>
         <!-- INSTAGRAM: replace YOUR_HANDLE with the real Instagram handle (also in the header) -->
         <a href="https://www.instagram.com/jeondam_ottae/" class="ig-link" target="_blank" rel="noopener" aria-label="Instagram">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <rect x="2" y="2" width="20" height="20" rx="5.5"/>
-            <circle cx="12" cy="12" r="4.5"/>
-            <circle cx="17.5" cy="6.5" r="0.6" fill="currentColor"/>
-          </svg>
+          <svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg>
         </a>
       </div>
       <!-- FOOTER LEGAL: replace all placeholder numbers with real ones -->
@@ -300,7 +275,7 @@
         본 사이트는 만 19세 이상 성인만 이용 가능하며, 청소년보호법에 따라
         미성년자에게 판매하지 않습니다.
       </p>
-      <p class="footer__copy" data-i18n="footer.copy">© 2026 WEVAPE x 전담어때 영등포점. All rights reserved.</p>
+      <p class="footer__copy" data-i18n="footer.copy">© 2026 위베이프 x 전담어때 영등포점. All rights reserved.</p>
     </div>
   </footer>
 
@@ -309,16 +284,16 @@
   <!-- ============================================================= -->
   <!-- FLOATING KAKAO: replace href with real KakaoTalk channel link -->
   <a href="https://talk.naver.com/ct/w5t1uu?frm=mnmb&frm=nmb_detail#nafullscreen" class="float-naver" data-chat-link aria-label="네이버 상담하기" data-i18n-attr="aria-label:cta.naver">
-    <span class="float-naver__icon">💬</span>
+    <svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg>
     <span class="float-naver__text" data-i18n="float.text">네이버 상담</span>
   </a>
 
   <!-- ============================================================= -->
-  <!-- WECHAT QR POPUP — Chinese page chat buttons open this          -->
+  <!-- WECHAT QR POPUP · Chinese page chat buttons open this          -->
   <!-- ============================================================= -->
   <div id="wechat-modal" class="wechat-modal" hidden>
     <div class="wechat-card" role="dialog" aria-modal="true" aria-labelledby="wechat-title">
-      <button type="button" class="wechat-card__close" id="wechat-close" aria-label="닫기" data-i18n-attr="aria-label:wechat.close">×</button>
+      <button type="button" class="wechat-card__close" id="wechat-close" aria-label="닫기" data-i18n-attr="aria-label:wechat.close"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button>
       <img class="wechat-card__qr" src="wechat-qr.jpg" alt="WeChat QR code" width="200" height="200" />
       <p id="wechat-title" class="wechat-card__title" data-i18n="wechat.title">위챗 QR 스캔으로 친구 추가</p>
       <p class="wechat-card__id"><span data-i18n="wechat.idLabel">위챗 ID</span>: e_cig_kr</p>
@@ -326,6 +301,6 @@
     </div>
   </div>
 
-  <script src="script.js?v=3"></script>
+  <script src="script.js?v=9"></script>
 </body>
 </html>

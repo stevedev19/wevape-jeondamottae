@@ -1,43 +1,34 @@
 /* =================================================================
-   위베이프 영등포점 — script.js
+   위베이프 영등포점 · script.js
    ================================================================= */
 
 /* =================================================================
-   ✏️  EDIT YOUR CONTENT HERE
+   EDIT YOUR CONTENT HERE
    Everything you'll want to change regularly lives in this block.
    You should not need to touch the layout code below it.
    ================================================================= */
 
-// Store phone number — used for the tap-to-call button.
+// Store phone number, used for the tap-to-call button.
 // Use digits only for the tel: link; DISPLAY is what users see.
 const STORE_PHONE = {
   tel: "050713762074",        // ← real number, digits only (no dashes)
   display: "0507-1376-2074",  // ← how it appears on screen
 };
 
-// Notice ticker — add/remove lines freely. They rotate in the marquee.
+// Notice ticker: add/remove lines freely. They rotate in the marquee.
 // One list per language: ko = 한국어, en = English, zh = 中文.
 const NOTICES = {
   ko: [
-    "🚚 전 상품 전국 무료배송 진행 중!",
-    "⚡ 영등포 인근 퀵서비스 가능 — 당일 수령",
-    "📦 오후 3시 이전 주문 시 당일발송",
-    "🎁 신규 회원 첫 구매 사은품 증정",
-    "💬 제품 상담은 네이버로 편하게 문의하세요",
+    "신규 회원 첫 구매 사은품 증정",
+    "제품 상담은 네이버로 편하게 문의하세요",
   ],
   en: [
-    "🚚 Free nationwide shipping on all products!",
-    "⚡ Quick delivery near Yeongdeungpo — get it today",
-    "📦 Order before 3 PM for same-day dispatch",
-    "🎁 Free gift with new members' first purchase",
-    "💬 Questions about products? Ask us on Naver",
+    "Free gift with new members' first purchase",
+    "Questions about products? Ask us on Naver",
   ],
   zh: [
-    "🚚 全场商品全国免费配送！",
-    "⚡ 永登浦附近可闪送 — 当日收货",
-    "📦 下午3点前下单，当日发货",
-    "🎁 新会员首次购物赠送礼品",
-    "💬 产品咨询请通过微信联系我们（微信号：e_cig_kr）",
+    "新会员首次购物赠送礼品",
+    "产品咨询请通过微信联系我们（微信号：e_cig_kr）",
   ],
 };
 
@@ -53,7 +44,7 @@ const BLOG_POSTS = [
     },
     excerpt: {
       ko: "영등포 전자담배｜해외여행 비행기 전자담배 기내반입, 중국·일본도 가능할까?",
-      en: "Yeongdeungpo E-Cigarettes | Can you take an e-cigarette on a flight abroad — even to China or Japan?",
+      en: "Yeongdeungpo E-Cigarettes | Can you take an e-cigarette on a flight abroad, even to China or Japan?",
       zh: "永登浦电子烟｜出国旅行能带电子烟上飞机吗？中国、日本也可以吗？",
     },
     link: "https://m.blog.naver.com/PostView.naver?blogId=mypage_5&logNo=224378329587&navType=by", // ← replace with the real post URL
@@ -94,45 +85,48 @@ const BLOG_POSTS = [
 const TRANSLATIONS = {
   en: {
     "meta.title": "WeVape x Jeondam-eottae Yeongdeungpo · E-Cigarette Shop · Free Nationwide Shipping",
-    "meta.desc": "WeVape x Jeondam-eottae Yeongdeungpo — e-cigarette devices, e-liquids, coils and accessories. Free nationwide shipping, same-day dispatch, quick delivery.",
+    "meta.desc": "WeVape x Jeondam-eottae Yeongdeungpo: e-cigarette devices, e-liquids, coils and accessories. Free nationwide shipping, same-day dispatch, quick delivery.",
 
     "age.title": "Are you 19 or older?",
     "age.desc": "This site sells e-cigarette products and is for adults only.<br />Minors may not use this site.",
-    "age.yes": "Yes (19 or older)",
+    "age.yes": "Yes, I am 19 or older",
     "age.no": "No",
+    "age.deniedTitle": "You can't use this site",
+    "age.deniedDesc": "Visitors under 19 can't view this site or buy in our store.",
+    "age.leave": "Go to Naver",
     "age.legal": "Under the Juvenile Protection Act, we do not sell to anyone under 19.",
 
     "logo.mark": "WeVape",
     "logo.sub": "Yeongdeungpo",
-    "nav.categories": "Categories",
+    "nav.categories": "What we sell",
     "nav.about": "About",
     "nav.blog": "News",
     "nav.location": "Location",
     "header.cta": "Chat",
 
-    "hero.eyebrow": "WeVape · Yeongdeungpo",
-    "hero.title": "Yeongdeungpo E-Cigarettes<br /><span class=\"grad-text\">Free Nationwide Shipping</span>",
-    "hero.subtitle": "Devices, e-liquids, coils and accessories.<br />Genuine products only, shipped the same day.",
+    "hero.title": "<span class=\"hero__line1\">Yeongdeungpo <span class=\"nowrap\">E-Cigarettes</span></span><br /><span class=\"text-shimmer\">Free Nationwide Shipping</span>",
+    "hero.subtitle": "We sell devices, e-liquids, coils and accessories in store and online.",
+    "svc.ship.label": "Shipping",
+    "svc.ship": "Free nationwide shipping · orders before 3 PM ship the same day",
+    "svc.quick.label": "Quick",
+    "svc.quick": "Quick delivery near Yeongdeungpo, same-day",
+    "svc.parking.label": "Parking",
+    "svc.parking": "Parking available when you visit",
+    "hero.products": "See what we sell",
+    "hero.age": "19+ only",
     "cta.naver": "Chat on Naver",
 
     "ticker.label": "Notices",
+    "ticker.title": "Notice",
+    "ticker.pause": "Pause notices",
+    "brands.label": "Brands we carry",
 
-    "perk.ship.title": "Free Shipping",
-    "perk.ship.desc": "Free anywhere in Korea",
-    "perk.quick.title": "Quick Delivery",
-    "perk.quick.desc": "When you need it fast",
-    "perk.parking.title": "Parking",
-    "perk.parking.desc": "Free parking for store visits",
-    "perk.sameday.title": "Same-Day Dispatch",
-    "perk.sameday.desc": "Even afternoon orders ship today",
-
-    "about.title": "Yeongdeungpo's E-Cigarette Specialist",
-    "about.p1": "WeVape x Jeondam-eottae Yeongdeungpo is a specialty store offering genuine e-cigarette devices, e-liquids, coils and accessories at fair prices. Whether you're a beginner or an enthusiast, our in-store experts will help you find the right product.",
-    "about.p2": "Online orders come with free nationwide shipping and same-day dispatch, and customers near Yeongdeungpo can get even faster delivery by quick service.",
+    "about.title": "1F, 161 Dangsan-ro",
+    "about.p1": "WeVape x Jeondam-eottae Yeongdeungpo sells e-cigarette devices, e-liquids, coils and accessories. Ask about any product in store or on Naver chat before you buy.",
     "about.btn": "View Store Location",
     "about.alt": "Store photo",
 
-    "cat.title": "Categories",
+    "cat.title": "What we sell",
     "cat.devices": "Devices",
     "cat.liquids": "E-Liquids",
     "cat.coils": "Coils",
@@ -145,7 +139,7 @@ const TRANSLATIONS = {
     "loc.addr": "WeVape Yeongdeungpo, 1F, 161 Dangsan-ro, Yeongdeungpo-gu, Seoul",
     "loc.hours": "<span>Hours</span> Daily 10:00 – 21:00",
     "loc.closed": "<span>Closed</span> Sunday",
-    "loc.naver": "💬 Naver Chat",
+    "loc.naver": "Naver Chat",
     "loc.map": "View on Naver Map",
 
     "footer.brand": "WeVape x Jeondam-eottae Yeongdeungpo",
@@ -156,59 +150,62 @@ const TRANSLATIONS = {
     "footer.hours": "Hours: Daily 10:00 – 21:00",
     "footer.addr": "Address: WeVape x Jeondam-eottae Yeongdeungpo, 1F, 161 Dangsan-ro, Yeongdeungpo-gu, Seoul",
     "footer.notice": "This site is for adults aged 19 and over only. Under the Juvenile Protection Act, we do not sell to minors.",
-    "footer.copy": "© 2026 WEVAPE x Jeondam-eottae Yeongdeungpo. All rights reserved.",
+    "footer.copy": "© 2026 WeVape x Jeondam-eottae Yeongdeungpo. All rights reserved.",
 
     "float.text": "Naver",
 
     "wechat.title": "Scan with WeChat to add us",
     "wechat.idLabel": "WeChat ID",
     "wechat.copy": "Copy WeChat ID",
-    "wechat.copied": "Copied ✓",
+    "wechat.copied": "Copied",
     "wechat.copyFail": "Please copy the ID manually",
     "wechat.close": "Close",
   },
 
   zh: {
     "meta.title": "WeVape x Jeondam-eottae 永登浦店 · 永登浦电子烟 · 全国免费配送",
-    "meta.desc": "WeVape x Jeondam-eottae 永登浦店 — 电子烟设备、烟油、雾化芯及配件。全国免费配送，当日发货，闪送服务。",
+    "meta.desc": "WeVape x Jeondam-eottae 永登浦店：电子烟设备、烟油、雾化芯及配件。全国免费配送，当日发货，闪送服务。",
 
     "age.title": "您是否已满19周岁？",
     "age.desc": "本网站销售电子烟相关产品，仅限成年人访问。<br />未成年人禁止使用。",
-    "age.yes": "是（已满19周岁）",
+    "age.yes": "是，我已满19周岁",
     "age.no": "否",
+    "age.deniedTitle": "您无法访问本网站",
+    "age.deniedDesc": "未满19周岁者不能浏览本网站，也不能在本店购买商品。",
+    "age.leave": "前往 Naver",
     "age.legal": "根据韩国《青少年保护法》，我们不向未满19周岁的青少年出售商品。",
 
     "logo.mark": "WeVape",
     "logo.sub": "永登浦店",
-    "nav.categories": "商品分类",
+    "nav.categories": "在售商品",
     "nav.about": "关于我们",
     "nav.blog": "公告",
     "nav.location": "交通指南",
     "header.cta": "咨询",
 
-    "hero.eyebrow": "WeVape · 永登浦店",
-    "hero.title": "永登浦电子烟<br /><span class=\"grad-text\">全国免费配送</span>",
-    "hero.subtitle": "从设备到烟油、雾化芯和配件，一应俱全。<br />只售正品，当日发货，快速送达。",
+    "hero.title": "<span class=\"hero__line1\">永登浦电子烟</span><br /><span class=\"text-shimmer\">全国免费配送</span>",
+    "hero.subtitle": "门店与线上同步销售设备、烟油、雾化芯及配件。",
+    "svc.ship.label": "配送",
+    "svc.ship": "全国免费配送 · 下午3点前下单当日发货",
+    "svc.quick.label": "闪送",
+    "svc.quick": "永登浦附近可闪送，当日收货",
+    "svc.parking.label": "停车",
+    "svc.parking": "到店可停车",
+    "hero.products": "查看在售商品",
+    "hero.age": "仅限年满19周岁者使用",
     "cta.naver": "微信咨询",
 
     "ticker.label": "公告",
+    "ticker.title": "公告",
+    "ticker.pause": "暂停公告滚动",
+    "brands.label": "在售品牌",
 
-    "perk.ship.title": "免费配送",
-    "perk.ship.desc": "全国各地免费送达",
-    "perk.quick.title": "闪送服务",
-    "perk.quick.desc": "急用可选闪送",
-    "perk.parking.title": "可停车",
-    "perk.parking.desc": "到店可免费停车",
-    "perk.sameday.title": "当日发货",
-    "perk.sameday.desc": "下午下单也当日发出",
-
-    "about.title": "永登浦电子烟专卖店",
-    "about.p1": "WeVape x Jeondam-eottae 永登浦店是一家以合理价格提供正品电子烟设备、烟油、雾化芯及配件的专卖店。无论您是新手还是资深玩家，店内专业顾问都能帮您找到合适的产品。",
-    "about.p2": "线上订单支持全国免费配送和当日发货，永登浦附近的顾客还可通过闪送更快收货。",
+    "about.title": "堂山路161号 1层",
+    "about.p1": "WeVape x Jeondam-eottae 永登浦店销售电子烟设备、烟油、雾化芯及配件。购买前可到店或通过微信咨询任何产品。",
     "about.btn": "查看门店位置",
     "about.alt": "门店照片",
 
-    "cat.title": "商品分类",
+    "cat.title": "在售商品",
     "cat.devices": "设备",
     "cat.liquids": "烟油",
     "cat.coils": "雾化芯",
@@ -221,7 +218,7 @@ const TRANSLATIONS = {
     "loc.addr": "首尔特别市永登浦区堂山路161号 1层 WeVape 永登浦店",
     "loc.hours": "<span>营业时间</span> 每天 10:00 – 21:00",
     "loc.closed": "<span>休息日</span> 周日",
-    "loc.naver": "💬 微信咨询",
+    "loc.naver": "微信咨询",
     "loc.map": "在 Naver 地图中查看",
 
     "footer.brand": "WeVape x Jeondam-eottae 永登浦店",
@@ -232,47 +229,85 @@ const TRANSLATIONS = {
     "footer.hours": "营业时间：每天 10:00 – 21:00",
     "footer.addr": "地址：首尔特别市永登浦区堂山路161号 1层 WeVape x Jeondam-eottae 永登浦店",
     "footer.notice": "本网站仅限年满19周岁的成年人使用。根据韩国《青少年保护法》，我们不向未成年人出售商品。",
-    "footer.copy": "© 2026 WEVAPE x Jeondam-eottae 永登浦店。保留所有权利。",
+    "footer.copy": "© 2026 WeVape x Jeondam-eottae 永登浦店。保留所有权利。",
 
     "float.text": "微信咨询",
 
     "wechat.title": "微信扫码添加好友",
     "wechat.idLabel": "微信号",
     "wechat.copy": "复制微信号",
-    "wechat.copied": "已复制 ✓",
+    "wechat.copied": "已复制",
     "wechat.copyFail": "请长按微信号手动复制",
     "wechat.close": "关闭",
   },
 };
 
 /* =================================================================
-   ⬇️  LAYOUT / BEHAVIOR CODE — usually no need to edit below
+   LAYOUT / BEHAVIOR CODE: usually no need to edit below
    ================================================================= */
 
-/* ---------- 1. Age verification modal ---------- */
+/* ---------- 0. Shared: keep Tab focus inside an open dialog ---------- */
+function trapTab(container, e) {
+  if (e.key !== "Tab") return;
+  const items = [...container.querySelectorAll("a[href], button:not([disabled])")]
+    .filter((el) => el.offsetParent !== null);
+  if (!items.length) return;
+  const first = items[0];
+  const last = items[items.length - 1];
+  if (e.shiftKey && (document.activeElement === first || !container.contains(document.activeElement))) {
+    e.preventDefault();
+    last.focus();
+  } else if (!e.shiftKey && document.activeElement === last) {
+    e.preventDefault();
+    first.focus();
+  }
+}
+
+/* ---------- 1. Age verification ---------- */
+// The gate is visible in the markup; the <head> script adds .age-ok to
+// <html> for visitors who already confirmed, which hides it.
 (function ageGate() {
+  const root = document.documentElement;
   const gate = document.getElementById("age-gate");
-  const yes = document.getElementById("age-yes");
-  const no = document.getElementById("age-no");
+  if (root.classList.contains("age-ok")) return;
+
+  const box = gate.querySelector(".age-gate__box");
+  const ask = document.getElementById("age-gate-ask");
+  const denied = document.getElementById("age-gate-denied");
   const KEY = "wevape_age_verified";
 
-  // Show only if not already confirmed this session.
-  // (localStorage persists; swap to sessionStorage for per-tab reset.)
-  if (!localStorage.getItem(KEY)) {
-    gate.classList.add("is-open");
-    document.body.style.overflow = "hidden";
+  // Everything behind the gate is unreachable by keyboard and screen readers.
+  const behind = [...document.body.children].filter((el) => el !== gate);
+  behind.forEach((el) => { el.inert = true; });
+  document.getElementById("age-gate-title").focus();
+
+  document.getElementById("age-yes").addEventListener("click", () => {
+    try { localStorage.setItem(KEY, "true"); } catch (e) { /* private mode: ask again next visit */ }
+    root.classList.add("age-ok");
+    behind.forEach((el) => { el.inert = false; });
+    gate.removeEventListener("keydown", onKey);
+    document.activeElement.blur();
+  });
+
+  document.getElementById("age-no").addEventListener("click", () => {
+    ask.hidden = true;
+    denied.hidden = false;
+    box.setAttribute("aria-labelledby", "age-gate-denied-title");
+    box.removeAttribute("aria-describedby");
+    document.getElementById("age-gate-denied-title").focus();
+  });
+
+  // Esc can't dismiss the gate (that would skip the age check); it
+  // returns focus to the question so keyboard users aren't stranded.
+  function onKey(e) {
+    if (e.key === "Escape") {
+      e.preventDefault();
+      (denied.hidden ? ask : denied).querySelector(".age-gate__title").focus();
+      return;
+    }
+    trapTab(box, e);
   }
-
-  yes.addEventListener("click", () => {
-    localStorage.setItem(KEY, "true");
-    gate.classList.remove("is-open");
-    document.body.style.overflow = "";
-  });
-
-  no.addEventListener("click", () => {
-    // Under-19 → leave the site.
-    window.location.href = "https://www.google.com";
-  });
+  gate.addEventListener("keydown", onKey);
 })();
 
 /* ---------- 2. Sticky header background on scroll ---------- */
@@ -298,20 +333,26 @@ function buildTicker(lang) {
   track.innerHTML = makeItems() + makeItems();
 }
 
+(function tickerToggle() {
+  const ticker = document.querySelector(".ticker");
+  const btn = document.getElementById("ticker-toggle");
+  if (!ticker || !btn) return;
+  btn.addEventListener("click", () => {
+    const paused = ticker.classList.toggle("is-paused");
+    btn.setAttribute("aria-pressed", paused);
+  });
+})();
+
 /* ---------- 4. Blog cards ---------- */
 function buildBlog(lang) {
   const grid = document.getElementById("blog-grid");
   if (!grid) return;
 
   const pick = (v) => (typeof v === "string" ? v : v[lang] || v.ko);
-  // On a language switch the cards are rebuilt after scroll reveal has
-  // already run, so show them straight away instead of leaving them hidden.
-  const revealClass = grid.dataset.built ? "reveal is-visible" : "reveal";
-  grid.dataset.built = "true";
 
   grid.innerHTML = BLOG_POSTS.map(
     (p) => `
-    <a class="blog-card ${revealClass}" href="${p.link}">
+    <a class="blog-card" href="${p.link}">
       <div class="blog-card__date">${p.date}</div>
       <h3 class="blog-card__title">${pick(p.title)}</h3>
       <p class="blog-card__excerpt">${pick(p.excerpt)}</p>
@@ -358,12 +399,16 @@ function buildBlog(lang) {
 
   closeBtn.addEventListener("click", close);
   modal.addEventListener("click", (e) => { if (e.target === modal) close(); });
-  document.addEventListener("keydown", (e) => { if (e.key === "Escape") close(); });
+  document.addEventListener("keydown", (e) => {
+    if (modal.hidden) return;
+    if (e.key === "Escape") close();
+    else trapTab(modal, e);
+  });
 
   copyBtn.addEventListener("click", async () => {
     try {
       await navigator.clipboard.writeText(WECHAT_ID);
-      copyBtn.textContent = t("wechat.copied") ?? "복사됨 ✓";
+      copyBtn.textContent = t("wechat.copied") ?? "복사됨";
     } catch {
       copyBtn.textContent = t("wechat.copyFail") ?? "위챗 ID를 직접 복사해 주세요";
     }
@@ -416,13 +461,15 @@ function buildBlog(lang) {
       btn.setAttribute("aria-pressed", active);
     });
 
-    localStorage.setItem(KEY, lang);
+    try { localStorage.setItem(KEY, lang); } catch (e) { /* not saved */ }
   }
 
   // Saved choice → browser language → Korean.
   const browser = (navigator.language || "").toLowerCase();
+  let saved = null;
+  try { saved = localStorage.getItem(KEY); } catch (e) { /* ignore */ }
   const initial =
-    localStorage.getItem(KEY) ||
+    saved ||
     (browser.startsWith("zh") ? "zh" : browser.startsWith("en") ? "en" : "ko");
 
   document.querySelectorAll(".lang-switch [data-lang]").forEach((btn) => {
@@ -437,29 +484,87 @@ function buildBlog(lang) {
   const call = document.getElementById("call-link");
   if (!call) return;
   call.href = `tel:${STORE_PHONE.tel}`;
-  call.textContent = `📞 ${STORE_PHONE.display}`;
+  call.querySelector("span").textContent = STORE_PHONE.display;
 })();
 
-/* ---------- 6. Scroll reveal (Intersection Observer) ---------- */
-(function scrollReveal() {
-  const els = document.querySelectorAll(".reveal");
-  if (!("IntersectionObserver" in window) || !els.length) {
-    els.forEach((el) => el.classList.add("is-visible"));
-    return;
-  }
+/* ---------- 6. Store photo section: fade-and-rise on entering view ---------- */
+(function revealAbout() {
+  const els = document.querySelectorAll(".about__text, .about__media");
+  const motionOK = window.matchMedia("(prefers-reduced-motion: no-preference)").matches;
+  if (!motionOK || !("IntersectionObserver" in window) || !els.length) return;
 
   const io = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
-          io.unobserve(entry.target);
-        }
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-revealed");
+        io.unobserve(entry.target);
       });
     },
-    { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+    { threshold: 0.15 }
   );
+  els.forEach((el) => {
+    el.classList.add("will-reveal");
+    io.observe(el);
+  });
+})();
 
-  // Note: blog cards are injected above, so observe after that runs.
-  els.forEach((el) => io.observe(el));
+/* ---------- 7. Hero first line: one-time light-to-bold letter stagger ---------- */
+// Runs once, on load (or right after the age gate is confirmed, so it isn't
+// hidden behind the gate). Touch and desktop alike; skipped for reduced motion.
+// A language switch re-renders the headline as plain text, without animation.
+(function headlineWeight() {
+  const line = document.querySelector(".hero__line1");
+  const motionOK = window.matchMedia("(prefers-reduced-motion: no-preference)").matches;
+  if (!line || !motionOK) return;
+
+  const LETTER_MS = 360;   // one letter's light -> bold -> normal
+  const TOTAL_MS = 600;    // whole line
+
+  function build() {
+    const text = line.textContent.trim();
+    const letters = [...text.replace(/\s+/g, "")];
+    // ~40ms per letter, tightened for long lines so the total stays ~600ms
+    const step = Math.min(40, (TOTAL_MS - LETTER_MS) / Math.max(letters.length - 1, 1));
+
+    // Screen readers get the whole text once; the letter cells are hidden from them.
+    const label = document.createElement("span");
+    label.className = "visually-hidden";
+    label.textContent = text;
+    const visual = document.createElement("span");
+    visual.setAttribute("aria-hidden", "true");
+
+    let i = 0;
+    text.split(/(\s+)/).forEach((part) => {
+      if (!part) return;
+      if (/^\s+$/.test(part)) { visual.append(" "); return; }
+      const word = document.createElement("span");
+      word.className = "wght-word";      // letters of a word never split across lines
+      [...part].forEach((ch) => {
+        const cell = document.createElement("span");
+        cell.className = "wght-char";
+        cell.style.setProperty("--i", i++);
+        cell.style.setProperty("--step", `${step}ms`);
+        cell.innerHTML = '<span class="wght-char__reserve"></span><span class="wght-char__glyph"></span>';
+        cell.firstChild.textContent = ch;
+        cell.lastChild.textContent = ch;
+        word.append(cell);
+      });
+      visual.append(word);
+    });
+
+    line.replaceChildren(label, visual);
+    line.style.opacity = "";
+  }
+
+  // Wait (briefly) for the variable font so the first frames aren't in the fallback.
+  function start() {
+    line.style.opacity = "0";   // avoid a bold -> light flash while the font loads
+    const family = document.documentElement.lang === "zh-CN" ? "Noto Sans SC" : "Noto Sans KR";
+    const ready = document.fonts ? document.fonts.load(`700 1em "${family}"`, line.textContent) : Promise.resolve();
+    Promise.race([ready, new Promise((r) => setTimeout(r, 800))]).then(build, build);
+  }
+
+  if (document.documentElement.classList.contains("age-ok")) start();
+  else document.getElementById("age-yes").addEventListener("click", start, { once: true });
 })();
