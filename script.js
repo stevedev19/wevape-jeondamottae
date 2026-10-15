@@ -37,6 +37,21 @@ const NOTICES = {
 // the project folder (shown cropped to a square; leave it out for no image).
 const BLOG_POSTS = [
   {
+    date: "2026.10.15",
+    image: "news-prix.jpg",
+    title: {
+      ko: "전담어때 기기추천",
+      en: "Jeondam-ottae Device Recommendation",
+      zh: "Jeondam-ottae 设备推荐",
+    },
+    excerpt: {
+      ko: "프릭스 PRIX, 2026년 전자담배 기계는 이거면 충분하다! 위베이프 영등포 추천!",
+      en: "PRIX: the only e-cigarette device you need in 2026! Recommended by WeVape Yeongdeungpo",
+      zh: "PRIX，2026年电子烟设备有它就够了！WeVape 永登浦店推荐！",
+    },
+    link: "https://m.blog.naver.com/PostView.naver?blogId=mypage_5&logNo=224442589874&navType=by",
+  },
+  {
     date: "2026.08.14",
     image: "news-1.jpg",
     title: {
@@ -50,21 +65,6 @@ const BLOG_POSTS = [
       zh: "永登浦电子烟｜出国旅行能带电子烟上飞机吗？中国、日本也可以吗？",
     },
     link: "https://m.blog.naver.com/PostView.naver?blogId=mypage_5&logNo=224378329587&navType=by", // ← replace with the real post URL
-  },
-  {
-    date: "2026.08.13",
-    image: "news-2.jpg",
-    title: {
-      ko: "전담어때 기기리뷰",
-      en: "Jeondam-ottae Device Review",
-      zh: "Jeondam-ottae 设备测评",
-    },
-    excerpt: {
-      ko: "영등포구청역 전자담배｜기계 사기 전 꼭 보세요, 7만원대 4종 비교",
-      en: "Yeongdeungpo-gu Office Station E-Cigarettes | Read this before you buy: 4 devices around ₩70,000 compared",
-      zh: "永登浦区厅站电子烟｜购机前必看，7万韩元价位4款对比",
-    },
-    link: "https://m.blog.naver.com/PostView.naver?blogId=mypage_5&logNo=224377547394&navType=by",
   },
   {
     date: "2026.07.03",
