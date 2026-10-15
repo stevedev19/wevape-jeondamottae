@@ -6,9 +6,90 @@
   <title data-i18n="meta.title">위베이프 x 전담어때 영등포점 · 영등포전자담배 · 전국 무료배송</title>
   <meta name="description" data-i18n-attr="content:meta.desc" content="위베이프 x 전담어때 영등포점 - 전자담배 기기, 액상, 코일, 액세서리. 전국 무료배송, 당일발송, 퀵서비스." />
 
+  <link rel="canonical" href="https://wevape-jeondamottae.vercel.app/" />
+
+  <!-- ============================================================= -->
+  <!-- SHARING PREVIEW (Open Graph / Twitter / KakaoTalk / Naver)     -->
+  <!-- ============================================================= -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="위베이프 x 전담어때 영등포점" />
+  <meta property="og:title" content="위베이프 x 전담어때 영등포점" />
+  <meta property="og:description" content="전국 무료배송, 당일발송. 기기부터 액상, 코일, 액세서리까지 믿을 수 있는 정품만." />
+  <meta property="og:url" content="https://wevape-jeondamottae.vercel.app/" />
+  <meta property="og:locale" content="ko_KR" />
+  <!-- PREVIEW IMAGE: og-image.jpg (1200x630), generated from IMG2597.jpg by
+       scripts/make-og-image.mjs (npm run og-image). Must be an absolute https:// URL. -->
+  <meta property="og:image" content="https://wevape-jeondamottae.vercel.app/og-image.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="위베이프 영등포점 매장 간판 · WeVape x Jeondam-ottae · 영등포전자담배 · 전국 무료배송" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="위베이프 x 전담어때 영등포점" />
+  <meta name="twitter:description" content="전국 무료배송, 당일발송. 기기부터 액상, 코일, 액세서리까지 믿을 수 있는 정품만." />
+  <meta name="twitter:image" content="https://wevape-jeondamottae.vercel.app/og-image.jpg" />
+
+  <!-- FAVICON: green rounded square with a dark droplet, drawn inline (no image file).
+       favicon.ico is the same icon (16/32/48px) for older browsers.
+       Replace both with a logo-based icon later if you like. -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2397C459'/%3E%3Cpath d='M32 11C32 11 17 28 17 39a15 15 0 0 0 30 0C47 28 32 11 32 11z' fill='%230b0c0b'/%3E%3Cpath d='M25 40a7 7 0 0 0 7 7' fill='none' stroke='%2397C459' stroke-width='3.5' stroke-linecap='round'/%3E%3C/svg%3E" />
+  <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48" />
+
+  <!-- STRUCTURED DATA (schema.org): business details for Google/Naver search.
+       Keep in sync with the hours (STORE_HOURS in script.js), phone and address. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Store",
+    "@id": "https://wevape-jeondamottae.vercel.app/#store",
+    "name": "위베이프 x 전담어때 영등포점",
+    "alternateName": "WeVape x Jeondam-ottae Yeongdeungpo",
+    "description": "전자담배 기기, 액상, 코일, 액세서리 판매. 전국 무료배송, 당일발송, 퀵서비스.",
+    "url": "https://wevape-jeondamottae.vercel.app/",
+    "image": "https://wevape-jeondamottae.vercel.app/IMG2597.jpg",
+    "telephone": "+82-507-1376-2074",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "당산로 161 1층",
+      "addressLocality": "영등포구",
+      "addressRegion": "서울특별시",
+      "addressCountry": "KR"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "10:00",
+        "closes": "21:00"
+      }
+    ],
+    "hasMap": "https://map.naver.com/p/entry/place/1257644330",
+    "sameAs": [
+      "https://map.naver.com/p/entry/place/1257644330",
+      "https://www.instagram.com/jeondam_ottae/"
+    ]
+  }
+  </script>
+
   <!-- Age gate: skip it before first paint if this browser already confirmed. -->
   <script>
     try { if (localStorage.getItem("wevape_age_verified")) document.documentElement.classList.add("age-ok"); } catch (e) {}
+  </script>
+  <!-- Theme: apply before first paint. A saved toggle choice wins; otherwise follow the OS (dark if no light preference). -->
+  <script>
+    (function () {
+      var saved = null;
+      try { saved = localStorage.getItem("wevape_theme"); } catch (e) {}
+      var light = saved ? saved === "light" : window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches;
+      if (light) document.documentElement.dataset.theme = "light";
+    })();
   </script>
 
   <!-- Google Fonts: IBM Plex Sans KR (Korean + Latin), Noto Sans SC (variable) for the Chinese page -->
@@ -19,7 +100,7 @@
        If that line's KO/EN text changes, update the text= list. -->
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&text=%EC%98%81%EB%93%B1%ED%8F%AC%EC%A0%84%EC%9E%90%EB%8B%B4%EB%B0%B0YeongdugpoE-Ciar&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="style.css?v=10" />
+  <link rel="stylesheet" href="style.css?v=27" />
 </head>
 <body>
 
@@ -30,10 +111,19 @@
     <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></symbol>
     <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="0.6"/></symbol>
     <symbol id="i-truck" viewBox="0 0 24 24"><path d="M2 6h11v10H2zM13 10h4l4 4v2h-8z"/><circle cx="6.5" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></symbol>
+    <symbol id="i-package" viewBox="0 0 24 24"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M4 7.5l8 4.5 8-4.5M12 12v9M8 5.25l8 4.5"/></symbol>
     <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></symbol>
     <symbol id="i-parking" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M10 17V7h3.5a3 3 0 0 1 0 6H10"/></symbol>
     <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></symbol>
+    <symbol id="i-chevron-down" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></symbol>
+    <symbol id="i-hash" viewBox="0 0 24 24"><path d="M5 9h14M5 15h14M10 4L8 20M16 4l-2 16"/></symbol>
+    <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 0 1 4.9.7c0 1.7-2.4 2.3-2.4 3.8M12 17.5v.01"/></symbol>
+    <symbol id="i-tag" viewBox="0 0 24 24"><path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="8.5" r="1.3"/></symbol>
     <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20.5 14.5A8.5 8.5 0 1 1 9.5 3.5a7 7 0 0 0 11 11z"/></symbol>
     <symbol id="i-pause" viewBox="0 0 24 24"><path d="M9 5v14M15 5v14"/></symbol>
     <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 5l12 7-12 7z"/></symbol>
   </svg>
@@ -89,12 +179,22 @@
         <a href="#location" data-i18n="nav.location">오시는길</a>
       </nav>
       <div class="header__right">
+        <!-- SEARCH: opens the command palette (also Cmd+K / Ctrl+K). Shortcut hint hidden on phones. -->
+        <button type="button" id="search-open" class="search-trigger" aria-haspopup="dialog" aria-keyshortcuts="Meta+K Control+K" aria-label="검색" data-i18n-attr="aria-label:search.open">
+          <svg class="icon" aria-hidden="true"><use href="#i-search"/></svg>
+          <kbd class="search-trigger__kbd" aria-hidden="true">⌘K</kbd>
+        </button>
         <!-- LANGUAGE SWITCH -->
         <div class="lang-switch" role="group" aria-label="Language">
           <button type="button" data-lang="en">ENG</button>
           <button type="button" data-lang="ko">KOR</button>
           <button type="button" data-lang="zh">中文</button>
         </div>
+        <!-- THEME TOGGLE: dark (default) / light. Sun shows in dark mode, moon in light mode. -->
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-pressed="false" aria-label="라이트 모드" data-i18n-attr="aria-label:theme.light">
+          <svg class="icon icon-sun" aria-hidden="true"><use href="#i-sun"/></svg>
+          <svg class="icon icon-moon" aria-hidden="true"><use href="#i-moon"/></svg>
+        </button>
         <!-- HEADER CTA: replace href with real KakaoTalk channel link 
         <a href="https://talk.naver.com/ct/w5t1uu?frm=mnmb&frm=nmb_detail#nafullscreen" class="btn btn--green btn--sm header__cta" data-i18n="header.cta">네이버 상담</a> -->
         <!-- INSTAGRAM: replace YOUR_HANDLE with the real Instagram handle (also in the footer) -->
@@ -126,13 +226,14 @@
           <button type="button" data-lang="ko">KOR</button>
           <button type="button" data-lang="zh">中文</button>
         </div>
-        <h1 class="hero__title" data-i18n="hero.title"><span class="hero__line1">영등포전자담배</span><br /><span class="text-shimmer">전국 무료배송</span></h1>
+        <h1 class="hero__title" data-i18n="hero.title"><span class="hero__line1">영등포전자담배</span><br /><span class="hero__line2">전국 무료배송</span></h1>
         <p class="hero__subtitle" data-i18n="hero.subtitle">기기, 액상, 코일, 액세서리를 매장과 온라인에서 판매합니다.</p>
-        <!-- SERVICE CHIPS: fill in quick-service area/time and parking details when known -->
-        <ul class="chips">
-          <li class="chip"><svg class="icon" aria-hidden="true"><use href="#i-truck"/></svg><span class="visually-hidden" data-i18n="svc.ship.label">배송</span><span data-i18n="svc.ship">전국 무료배송 · 오후 3시 전 주문 당일발송</span></li>
-          <li class="chip"><svg class="icon" aria-hidden="true"><use href="#i-bolt"/></svg><span class="visually-hidden" data-i18n="svc.quick.label">퀵</span><span data-i18n="svc.quick">영등포 인근 퀵서비스, 당일 수령</span></li>
-          <li class="chip"><svg class="icon" aria-hidden="true"><use href="#i-parking"/></svg><span class="visually-hidden" data-i18n="svc.parking.label">주차</span><span data-i18n="svc.parking">매장 방문 시 주차 가능</span></li>
+        <!-- PERK CARDS: title + one-line detail, icon in accent green -->
+        <ul class="perks">
+          <li class="perk"><svg class="icon perk__icon" aria-hidden="true"><use href="#i-truck"/></svg><strong class="perk__title" data-i18n="perk.ship.title">무료배송</strong><span class="perk__desc" data-i18n="perk.ship.desc">전국 어디든 무료로</span></li>
+          <li class="perk"><svg class="icon perk__icon" aria-hidden="true"><use href="#i-bolt"/></svg><strong class="perk__title" data-i18n="perk.quick.title">퀵서비스</strong><span class="perk__desc" data-i18n="perk.quick.desc">영등포 인근 당일 수령</span></li>
+          <li class="perk"><svg class="icon perk__icon" aria-hidden="true"><use href="#i-parking"/></svg><strong class="perk__title" data-i18n="perk.parking.title">주차가능</strong><span class="perk__desc" data-i18n="perk.parking.desc">매장 방문 시 이용</span></li>
+          <li class="perk"><svg class="icon perk__icon" aria-hidden="true"><use href="#i-package"/></svg><strong class="perk__title" data-i18n="perk.sameday.title">당일발송</strong><span class="perk__desc" data-i18n="perk.sameday.desc">오후 3시 전 주문 시</span></li>
         </ul>
         <div class="hero__actions">
           <a href="https://talk.naver.com/ct/w5t1uu?frm=mnmb&frm=nmb_detail#nafullscreen" class="btn btn--green btn--lg hero__cta" data-chat-link data-i18n="cta.naver">네이버 상담하기</a>
@@ -140,6 +241,11 @@
         </div>
         <p class="hero__age" data-i18n="hero.age">만 19세 이상만 이용할 수 있습니다</p>
       </div>
+
+      <!-- SCROLL HINT: bouncing chevron, scrolls to the stats row; fades out once the hero is scrolled away (script.js) -->
+      <button type="button" id="scroll-hint" class="scroll-hint" aria-label="아래로 스크롤" data-i18n-attr="aria-label:hint.label">
+        <svg class="icon" aria-hidden="true"><use href="#i-chevron-down"/></svg>
+      </button>
     </section>
 
     <!-- ============================================================= -->
@@ -155,6 +261,28 @@
         <svg class="icon icon-play" aria-hidden="true"><use href="#i-play"/></svg>
       </button>
     </div>
+
+    <!-- ============================================================= -->
+    <!-- STATS · numbers count up once when scrolled into view          -->
+    <!-- ============================================================= -->
+    <!-- PLACEHOLDER NUMBERS: replace each data-count AND the number inside the
+         tag with the real figure (both must match). Labels are in data-i18n. -->
+    <section id="stats" class="stats container" aria-label="위베이프 숫자로 보기" data-i18n-attr="aria-label:stats.label">
+      <ul class="stats__list">
+        <li class="stat">
+          <span class="stat__num"><span data-count="500">500</span>+</span>
+          <span class="stat__label" data-i18n="stats.reviews">고객 리뷰</span>
+        </li>
+        <li class="stat">
+          <span class="stat__num"><span data-count="3">3</span><span data-i18n="stats.years.unit">년</span></span>
+          <span class="stat__label" data-i18n="stats.years">운영</span>
+        </li>
+        <li class="stat">
+          <span class="stat__num"><span data-count="10000">10,000</span>+</span>
+          <span class="stat__label" data-i18n="stats.shipped">배송 완료</span>
+        </li>
+      </ul>
+    </section>
 
 
     <!-- ============================================================= -->
@@ -193,9 +321,26 @@
     <section class="brands">
       <ul class="brands__inner container" aria-label="취급 브랜드" data-i18n-attr="aria-label:brands.label">
         <li class="brand">RELX</li>
-        <li class="brand">WAKO</li>
-        <li class="brand">ACE</li>
+        <li class="brand">BUBBLEMON</li>
+        <li class="brand">NASTY</li>
+        <li class="brand">DOJO</li>
+        <li class="brand">VITABON</li>
+        <li class="brand">MOLBAR</li>
+        <li class="brand">CLICKMATE</li>
       </ul>
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- REVIEWS · real Naver Map reviews, edited in script.js (REVIEWS) -->
+    <!-- ============================================================= -->
+    <section id="reviews" class="reviews container">
+      <h2 class="section-title center" data-i18n="reviews.title">고객 후기</h2>
+      <!-- Swipe row on mobile, 3-column grid from 720px -->
+      <div id="reviews-track" class="reviews__track" role="region" tabindex="0" aria-label="고객 후기" data-i18n-attr="aria-label:reviews.title"><!-- injected by JS --></div>
+      <div class="reviews__more">
+        <!-- Naver review page; the URL is set in script.js (NAVER_REVIEWS_URL) -->
+        <a id="reviews-all" href="https://map.naver.com/p/entry/place/1257644330?c=15.00,0,0,0,dh&amp;placePath=%2Freview" target="_blank" rel="noopener noreferrer" class="btn btn--ghost" data-i18n="reviews.all">네이버에서 전체 리뷰 보기</a>
+      </div>
     </section>
 
     <!-- ============================================================= -->
@@ -220,6 +365,14 @@
         <!-- STORE ADDRESS: replace with real address -->
         <p class="location__addr" data-i18n="loc.addr">서울특별시 영등포구 당산로 161 1층 위베이프 영등포점</p>
 
+        <!-- OPEN / CLOSED badge: set live by script.js from STORE_HOURS (Seoul time).
+             Stays hidden without JavaScript, so it never shows a wrong status. -->
+        <p id="hours-status" class="hours-status" hidden>
+          <span class="hours-status__dot" aria-hidden="true"></span>
+          <span class="hours-status__open" data-i18n="status.open">영업중</span>
+          <span class="hours-status__closed" data-i18n="status.closed">영업종료</span>
+        </p>
+
         <ul class="location__hours">
           <li data-i18n="loc.hours"><span>영업시간</span> 매일 10:00 – 21:00</li>
           <li data-i18n="loc.closed"><span>휴무날</span> 일요일 </li>
@@ -233,18 +386,72 @@
         </div>
       </div>
 
-      <!-- TEMPORARY LOCATION CARD: static placeholder (no map API needed).
-           A real embedded map (Kakao / Naver) can be swapped in here later. -->
       <div class="location__map">
-        <svg class="icon location__map-pin" aria-hidden="true"><use href="#i-pin"/></svg>
-        <p class="location__map-addr">서울특별시 영등포구 당산로 161 1층 위베이프 영등포점</p>
-        <a
-          href="https://map.naver.com/p/search/서울특별시%20영등포구%20당산로%20161"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn btn--green btn--sm"
-          data-i18n="loc.map"
-        >네이버지도에서 보기</a>
+        <!-- Fixed-height frame: if the iframe fails to load, this stays an empty dark box. -->
+        <div class="map-frame">
+          <!-- PASTE GOOGLE MAPS EMBED IFRAME HERE
+               (Google Maps → Share → Embed a map → copy HTML). Replace the
+               placeholder iframe below; keep loading="lazy" and the title. -->
+          <iframe
+            src="https://www.google.com/maps?q=서울특별시+영등포구+당산로+161&output=embed"
+            title="위베이프 영등포점 위치 (Google 지도)"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="location__map-actions">
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=서울특별시+영등포구+당산로+161"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn--ghost btn--sm"
+            data-i18n="loc.gmap"
+          >Google Maps에서 보기</a>
+          <a
+            href="https://map.naver.com/p/search/서울특별시%20영등포구%20당산로%20161"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn--ghost btn--sm"
+            data-i18n="loc.map"
+          >네이버지도에서 보기</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- FAQ · accordion, one item open at a time (script.js)          -->
+    <!-- ============================================================= -->
+    <section id="faq" class="faq container">
+      <p class="eyebrow center" data-i18n="faq.eyebrow">FAQ</p>
+      <h2 class="section-title center" data-i18n="faq.title">자주 묻는 질문</h2>
+      <div class="faq__list">
+        <div class="faq__item">
+          <h3><button type="button" class="faq__q" id="faq-q1" aria-expanded="false" aria-controls="faq-a1"><span data-i18n="faq.q1">배송은 얼마나 걸리나요?</span><svg class="icon" aria-hidden="true"><use href="#i-chevron-down"/></svg></button></h3>
+          <div class="faq__a" id="faq-a1" role="region" aria-labelledby="faq-q1"><div class="faq__a-inner"><p data-i18n="faq.a1">전국 무료배송이며, 오후 3시 전 주문은 당일 발송합니다. 영등포 인근은 퀵서비스로 당일 받아보실 수 있습니다.</p></div></div>
+        </div>
+        <div class="faq__item">
+          <h3><button type="button" class="faq__q" id="faq-q2" aria-expanded="false" aria-controls="faq-a2"><span data-i18n="faq.q2">미성년자도 구매할 수 있나요?</span><svg class="icon" aria-hidden="true"><use href="#i-chevron-down"/></svg></button></h3>
+          <div class="faq__a" id="faq-a2" role="region" aria-labelledby="faq-q2"><div class="faq__a-inner"><p data-i18n="faq.a2">아니요. 만 19세 이상 성인만 구매할 수 있으며, 청소년보호법에 따라 미성년자에게는 판매하지 않습니다.</p></div></div>
+        </div>
+        <!-- PLACEHOLDER: confirm the real exchange/refund policy (also in script.js: faq.a3) -->
+        <div class="faq__item">
+          <h3><button type="button" class="faq__q" id="faq-q3" aria-expanded="false" aria-controls="faq-a3"><span data-i18n="faq.q3">교환/환불이 가능한가요?</span><svg class="icon" aria-hidden="true"><use href="#i-chevron-down"/></svg></button></h3>
+          <div class="faq__a" id="faq-a3" role="region" aria-labelledby="faq-q3"><div class="faq__a-inner"><p data-i18n="faq.a3">미개봉 제품은 수령 후 7일 이내 교환·환불이 가능합니다. 자세한 내용은 네이버 상담으로 문의해 주세요.</p></div></div>
+        </div>
+        <!-- PLACEHOLDER: confirm the real payment methods (also in script.js: faq.a4) -->
+        <div class="faq__item">
+          <h3><button type="button" class="faq__q" id="faq-q4" aria-expanded="false" aria-controls="faq-a4"><span data-i18n="faq.q4">결제 방법은 어떻게 되나요?</span><svg class="icon" aria-hidden="true"><use href="#i-chevron-down"/></svg></button></h3>
+          <div class="faq__a" id="faq-a4" role="region" aria-labelledby="faq-q4"><div class="faq__a-inner"><p data-i18n="faq.a4">매장에서는 카드와 현금 결제가 가능하며, 온라인 주문 결제 방법은 네이버 상담에서 안내해 드립니다.</p></div></div>
+        </div>
+        <div class="faq__item">
+          <h3><button type="button" class="faq__q" id="faq-q5" aria-expanded="false" aria-controls="faq-a5"><span data-i18n="faq.q5">매장 방문 없이 온라인으로만 구매 가능한가요?</span><svg class="icon" aria-hidden="true"><use href="#i-chevron-down"/></svg></button></h3>
+          <div class="faq__a" id="faq-a5" role="region" aria-labelledby="faq-q5"><div class="faq__a-inner"><p data-i18n="faq.a5">네. 네이버 상담으로 주문하시면 전국 어디든 무료로 배송해 드립니다.</p></div></div>
+        </div>
+        <div class="faq__item">
+          <h3><button type="button" class="faq__q" id="faq-q6" aria-expanded="false" aria-controls="faq-a6"><span data-i18n="faq.q6">영업시간과 주차는 어떻게 되나요?</span><svg class="icon" aria-hidden="true"><use href="#i-chevron-down"/></svg></button></h3>
+          <div class="faq__a" id="faq-a6" role="region" aria-labelledby="faq-q6"><div class="faq__a-inner"><p data-i18n="faq.a6">매일 10:00–21:00 영업하며 일요일은 휴무입니다. 매장 방문 시 주차할 수 있습니다.</p></div></div>
+        </div>
       </div>
     </section>
 
@@ -268,7 +475,7 @@
         <li><span data-i18n="footer.rep">대표</span>: 홍길동</li>
         <li><span data-i18n="footer.phone">전화번호</span>: 050713762074</li>
         <li><span data-i18n="footer.regNo">통신판매업신고번호</span>: 2026-서울영등포-0000</li>
-        <li data-i18n="footer.hours">영업시간: 매일 10:00 – 21:00</li>
+        <li data-i18n="footer.hours">영업시간: 매일 10:00 – 21:00 (일요일 휴무)</li>
         <li data-i18n="footer.addr">주소: 서울특별시 영등포구 당산로 161 1층 위베이프 x 전담어때 영등포점</li>
       </ul>
       <p class="footer__notice" data-i18n="footer.notice">
@@ -288,6 +495,11 @@
     <span class="float-naver__text" data-i18n="float.text">네이버 상담</span>
   </a>
 
+  <!-- BACK TO TOP: bottom-left, level with the chat button; shown after scrolling (script.js) -->
+  <button type="button" id="to-top" class="to-top" aria-label="맨 위로" data-i18n-attr="aria-label:totop.label">
+    <svg class="icon" aria-hidden="true"><use href="#i-arrow-up"/></svg>
+  </button>
+
   <!-- ============================================================= -->
   <!-- WECHAT QR POPUP · Chinese page chat buttons open this          -->
   <!-- ============================================================= -->
@@ -301,6 +513,27 @@
     </div>
   </div>
 
-  <script src="script.js?v=9"></script>
+  <!-- ============================================================= -->
+  <!-- COMMAND PALETTE · search sections, FAQ, products, actions      -->
+  <!-- Items are built in script.js (section 4-p) from the page text. -->
+  <!-- ============================================================= -->
+  <div id="palette" class="palette" hidden>
+    <div class="palette__box" role="dialog" aria-modal="true" aria-label="사이트 검색" data-i18n-attr="aria-label:search.label">
+      <div class="palette__field">
+        <svg class="icon palette__icon" aria-hidden="true"><use href="#i-search"/></svg>
+        <input id="palette-input" class="palette__input" type="text" role="combobox" aria-expanded="true" aria-controls="palette-list" aria-autocomplete="list" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="go"
+          placeholder="섹션, 질문, 품목 검색…" aria-label="사이트 검색" data-i18n-attr="placeholder:search.placeholder;aria-label:search.label" />
+        <button type="button" id="palette-close" class="palette__close" aria-label="닫기" data-i18n-attr="aria-label:search.close">
+          <kbd class="palette__esc" aria-hidden="true">Esc</kbd>
+          <svg class="icon palette__x" aria-hidden="true"><use href="#i-close"/></svg>
+        </button>
+      </div>
+      <ul id="palette-list" class="palette__list" role="listbox" aria-label="검색 결과" data-i18n-attr="aria-label:search.results"></ul>
+      <p id="palette-empty" class="palette__empty" hidden data-i18n="search.empty">검색 결과가 없습니다</p>
+      <p class="palette__footer" data-i18n="search.hint">↑↓ 이동 · Enter 선택 · Esc 닫기</p>
+    </div>
+  </div>
+
+  <script src="script.js?v=27"></script>
 </body>
 </html>
